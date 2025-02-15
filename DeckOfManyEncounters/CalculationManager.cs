@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace DeckOfManyEncounters
 {
-    //List<Monster> monsterList = new List<Monster>();
-    class CalculationManager
+    
+    public class CalculationManager
     {
+        private List<Monster> monsterList = new List<Monster> { };
+        //calculation functions
     }
 }
