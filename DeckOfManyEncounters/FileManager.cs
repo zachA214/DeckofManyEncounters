@@ -15,6 +15,8 @@ namespace DeckOfManyEncounters
             //takes the current line in the file, splits it, then inserts it into the monster
             //list if it fits within the CR and is of the desired location
             var fields = line.Split(',');//splits the line into an array, using ',' as the delimiter
+
+            //condition filters out to the enemies that are desired based on CR and location
             if ((location == fields[23] && CR <= Convert.ToDouble(fields[18])) || (location == "any" && CR <= Convert.ToDouble(fields[18])))
             {
                 //allocate the memory and input the thing
@@ -51,7 +53,6 @@ namespace DeckOfManyEncounters
         {
             StreamReader sr = new StreamReader("datafile.csv");
             sr.BaseStream.Seek(0, SeekOrigin.Begin);//start reading the file from the top
-            //from user input we will filter out options
             string str = sr.ReadLine();
             str = sr.ReadLine();//omits the first line, which should be the header and starts at the second line
             while(str != null)
