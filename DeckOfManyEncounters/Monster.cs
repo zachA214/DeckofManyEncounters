@@ -6,19 +6,16 @@ using System.Threading.Tasks;
 
 namespace DeckOfManyEncounters
 {   
-    enum Size
-    {
-        Small, Medium, Large
-    }
+
     internal class Monster
     {
         private string name = string.Empty;
 
         public string Name { get { return name; } set { name = value; } }
 
-        private Size size = Size.Small;
+        private string size = string.Empty;
 
-        public Size Size { get { return size; } set { size = value; } }   
+        public string Size { get { return size; } set { size = value; } }   
 
         private string type = string.Empty;
 
