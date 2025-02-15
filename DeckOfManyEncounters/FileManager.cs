@@ -19,12 +19,10 @@ namespace DeckOfManyEncounters
 	        Console.WriteLine($"Processed movie {fields[0]} ({fields[1]})");
              */
             var fields = line.Split(',');
-            if (location == fields[2] && CR <= Convert.ToDouble(fields[3]))//2 -> location index, 3 -> CR index
+            if (location == fields[23] && CR <= Convert.ToDouble(fields[18]))
             {
                 //allocate the memory and input the thing
             }
-
-
         }
 
         public void readData(string location, int CR)
