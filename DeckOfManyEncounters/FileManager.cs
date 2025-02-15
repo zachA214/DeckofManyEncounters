@@ -10,7 +10,7 @@ namespace DeckOfManyEncounters
     class FileManager
     {
 
-        public void parseData(string line, string location, int CR)//also accept the class array for memory allocation
+        public void parseData(string line, string location, int CR, List<Monster> list)//also accept the class array for memory allocation
         {
             /*
              var fields = line.Split(",");
@@ -25,7 +25,7 @@ namespace DeckOfManyEncounters
             }
         }
 
-        public void readData(string location, int CR)
+        public void readData(string location, int CR, List<Monster> list)
         {
             StreamReader sr = new StreamReader("datafile.csv");
             sr.BaseStream.Seek(0, SeekOrigin.Begin);//start reading the file from the top
@@ -35,7 +35,7 @@ namespace DeckOfManyEncounters
             while(str != null)
             {
                 //parsing here
-                parseData(str, location, CR);
+                parseData(str, location, CR, list);
 
 
                 //end of loop, last condition
