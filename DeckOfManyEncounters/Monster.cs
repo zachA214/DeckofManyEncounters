@@ -58,7 +58,7 @@ namespace DeckOfManyEncounters
 
         private int wis;
 
-        public int WIS { get { return wis; } set { wis = value; } };
+        public int WIS { get { return wis; } set { wis = value; } }
 
         private int cha;
 

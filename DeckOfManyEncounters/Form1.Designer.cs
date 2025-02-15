@@ -29,7 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeckOfManyEncounters));
+            this.inputFormOpenButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // inputFormOpenButton
+            // 
+            this.inputFormOpenButton.Location = new System.Drawing.Point(657, 343);
+            this.inputFormOpenButton.Name = "inputFormOpenButton";
+            this.inputFormOpenButton.Size = new System.Drawing.Size(157, 44);
+            this.inputFormOpenButton.TabIndex = 0;
+            this.inputFormOpenButton.Text = "Input form here";
+            this.inputFormOpenButton.UseVisualStyleBackColor = true;
+            this.inputFormOpenButton.Click += new System.EventHandler(this.inputFormOpenButton_Click);
             // 
             // DeckOfManyEncounters
             // 
@@ -37,6 +48,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(1002, 712);
+            this.Controls.Add(this.inputFormOpenButton);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -51,6 +63,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Button inputFormOpenButton;
     }
 }
 
