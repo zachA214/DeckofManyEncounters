@@ -10,4 +10,10 @@ data <- data %>%
   mutate(has_fly_speed = if_else(grepl("fly", data$Speeds), 1, 0)) %>%
   mutate(has_swim_speed = if_else(grepl("swim", data$Speeds), 1, 0))
 
+for (i in (1:length(data))) {
+  for (j in (1:nrow(data))) {
+    data[[i]][[j]] <- gsub(", ", ";", data[[i]][[j]])
+  }
+}
+
 write.csv(data, "C:\\Users\\chris\\OneDrive - Washington State University (email.wsu.edu)\\School Stuff\\hackathon 2025\\datafile.csv")
