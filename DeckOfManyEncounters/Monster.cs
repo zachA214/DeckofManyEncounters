@@ -89,5 +89,16 @@ namespace DeckOfManyEncounters
 
         public string Additional { get { return additional; } set { additional = value; } }
 
+        private bool hasFly = false;
+
+        public bool HasFly { get { return hasFly; } set { hasFly = value; } }
+
+        private bool hasSwim = false;
+
+        public bool HasSwim { get { return hasSwim; } set { HasSwim = value; } }
+
+        private string realm = string.Empty;
+
+        public string Realm { get { return realm; } set { realm = value; } }
     }
 }
