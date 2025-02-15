@@ -12,16 +12,36 @@ namespace DeckOfManyEncounters
 
         public void parseData(string line, string location, int CR, List<Monster> list)//also accept the class array for memory allocation
         {
-            /*
-             var fields = line.Split(",");
-
-	        //Process the fields
-	        Console.WriteLine($"Processed movie {fields[0]} ({fields[1]})");
-             */
-            var fields = line.Split(',');
+            var fields = line.Split(',');//splits the line into an array, using ',' as the delimiter
             if (location == fields[23] && CR <= Convert.ToDouble(fields[18]))
             {
                 //allocate the memory and input the thing
+                Monster temp = new Monster { };
+                //yay adding the data is so not tedious at all
+                temp.Name = fields[0];
+                temp.Size = fields[1];
+                temp.Type = fields[2];
+                temp.Alignment = fields[3];
+                temp.AC = Convert.ToInt32(fields[4]);
+                temp.HP = Convert.ToInt32(fields[5]);
+                temp.Speed = fields[6];
+                temp.STR = Convert.ToInt32(fields[7]);
+                temp.DEX = Convert.ToInt32(fields[8]);
+                temp.CON = Convert.ToInt32(fields[9]);
+                temp.Intelligence = Convert.ToInt32(fields[10]);
+                temp.WIS = Convert.ToInt32(fields[11]);
+                temp.CHA = Convert.ToInt32(fields[12]);
+                temp.SavThrows = fields[13];
+                temp.Skills = fields[14];
+                temp.WRI = fields[15];
+                temp.Senses = fields[16];
+                temp.Languages = fields[17];
+                temp.ChallengeRating = Convert.ToInt32(fields[18]);
+                temp.Additional = fields[19];
+                temp.Realm = fields[23];
+                temp.HasFly = Convert.ToBoolean(fields[24]);
+                temp.HasSwim = Convert.ToBoolean(fields[25]);
+                list.Add(temp);
             }
         }
 
