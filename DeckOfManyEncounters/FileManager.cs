@@ -12,8 +12,10 @@ namespace DeckOfManyEncounters
 
         public void parseData(string line, string location, int CR, List<Monster> list)//also accept the class array for memory allocation
         {
+            //takes the current line in the file, splits it, then inserts it into the monster
+            //list if it fits within the CR and is of the desired location
             var fields = line.Split(',');//splits the line into an array, using ',' as the delimiter
-            if (location == fields[23] && CR <= Convert.ToDouble(fields[18]))
+            if ((location == fields[23] && CR <= Convert.ToDouble(fields[18])) || (location == "any" && CR <= Convert.ToDouble(fields[18])))
             {
                 //allocate the memory and input the thing
                 Monster temp = new Monster { };
