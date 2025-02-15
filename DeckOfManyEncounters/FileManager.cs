@@ -10,34 +10,55 @@ namespace DeckOfManyEncounters
     class FileManager
     {
 
-        public void parseData(string line, string location, int CR)//also accept the class array for memory allocation
+        public void parseData(string line, string location, int CR, List<Monster> list)//also accept the class array for memory allocation
         {
-            /*
-             var fields = line.Split(",");
+            //takes the current line in the file, splits it, then inserts it into the monster
+            //list if it fits within the CR and is of the desired location
+            var fields = line.Split(',');//splits the line into an array, using ',' as the delimiter
 
-	        //Process the fields
-	        Console.WriteLine($"Processed movie {fields[0]} ({fields[1]})");
-             */
-            var fields = line.Split(',');
-            if (location == fields[2] && CR <= Convert.ToDouble(fields[3]))//2 -> location index, 3 -> CR index
+            //condition filters out to the enemies that are desired based on CR and location
+            if ((location == fields[23] && CR <= Convert.ToDouble(fields[18])) || (location == "any" && CR <= Convert.ToDouble(fields[18])))
             {
                 //allocate the memory and input the thing
+                Monster temp = new Monster { };
+                //yay adding the data is so not tedious at all
+                temp.Name = fields[0];
+                temp.Size = fields[1];
+                temp.Type = fields[2];
+                temp.Alignment = fields[3];
+                temp.AC = Convert.ToInt32(fields[4]);
+                temp.HP = Convert.ToInt32(fields[5]);
+                temp.Speed = fields[6];
+                temp.STR = Convert.ToInt32(fields[7]);
+                temp.DEX = Convert.ToInt32(fields[8]);
+                temp.CON = Convert.ToInt32(fields[9]);
+                temp.Intelligence = Convert.ToInt32(fields[10]);
+                temp.WIS = Convert.ToInt32(fields[11]);
+                temp.CHA = Convert.ToInt32(fields[12]);
+                temp.SavThrows = fields[13];
+                temp.Skills = fields[14];
+                temp.WRI = fields[15];
+                temp.Senses = fields[16];
+                temp.Languages = fields[17];
+                temp.ChallengeRating = Convert.ToInt32(fields[18]);
+                temp.Additional = fields[19];
+                temp.Realm = fields[23];
+                temp.HasFly = Convert.ToBoolean(fields[24]);
+                temp.HasSwim = Convert.ToBoolean(fields[25]);
+                list.Add(temp);
             }
-
-
         }
 
-        public void readData(string location, int CR)
+        public void readData(string location, int CR, List<Monster> list)
         {
             StreamReader sr = new StreamReader("datafile.csv");
             sr.BaseStream.Seek(0, SeekOrigin.Begin);//start reading the file from the top
-            //from user input we will filter out options
             string str = sr.ReadLine();
             str = sr.ReadLine();//omits the first line, which should be the header and starts at the second line
             while(str != null)
             {
                 //parsing here
-                parseData(str, location, CR);
+                parseData(str, location, CR, list);
 
 
                 //end of loop, last condition
