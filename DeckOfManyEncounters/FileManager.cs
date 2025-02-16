@@ -10,15 +10,15 @@ namespace DeckOfManyEncounters
     class FileManager
     {
 
-        public void parseData(string line, string location, int CR, List<Monster> list, bool fly, bool swim)//also accept the class array for memory allocation
+        public void parseData(string line, string location, int CR, List<Monster> list, bool fly, bool swim, string alignment)//also accept the class array for memory allocation
         {
             //takes the current line in the file, splits it, then inserts it into the monster
             //list if it fits within the CR and is of the desired location
             var fields = line.Split(',');//splits the line into an array, using ',' as the delimiter
 
             //condition filters out to the enemies that are desired based on CR and location
-            if ((location == fields[23] && CR >= Convert.ToDouble(fields[18])) || 
-                (location == "Any" && CR >= Convert.ToDouble(fields[18])))
+            if (((location == fields[23] && CR >= Convert.ToDouble(fields[18])) || 
+                (location == "Any" && CR >= Convert.ToDouble(fields[18]))) && getAlignment(fields[3], alignment) == 1)
             {
                 //Empty conditionals so that we skip past flying or swimming enemies if user wants to omit them
                 if (fly == true && Convert.ToBoolean(Convert.ToInt32(fields[24])) == true);
@@ -57,7 +57,7 @@ namespace DeckOfManyEncounters
             }
         }
 
-        public void readData(string location, int CR, List<Monster> list, bool fly, bool swim)
+        public void readData(string location, int CR, List<Monster> list, bool fly, bool swim, string alignment)
         {
             StreamReader sr = new StreamReader("datafile.csv");
             sr.BaseStream.Seek(0, SeekOrigin.Begin);//start reading the file from the top
@@ -66,7 +66,7 @@ namespace DeckOfManyEncounters
             while(str != null)
             {
                 //parsing here
-                parseData(str, location, CR, list, fly, swim);
+                parseData(str, location, CR, list, fly, swim, alignment);
 
 
                 //end of loop, last condition
@@ -90,7 +90,7 @@ namespace DeckOfManyEncounters
             {
                 alignment = 1;
             }
-            else if((al == "NOT LAWFUL" || al.Contains("ANY") || al == "U") && desired == "Any")
+            else if((al == "NOT LAWFUL" || al.Contains("ANY") || al == "U"))
             {
                 alignment = 1;
             }

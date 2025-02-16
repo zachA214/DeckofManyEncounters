@@ -18,7 +18,7 @@ namespace DeckOfManyEncounters.Tests
             FileManager fileManager = new FileManager();
             List<Monster> monsterList = new List<Monster> { };
             string line = "Aarakocra,Medium,Humanoid,NG,12,13,20;50 fly,10,14,10,11,12,11,None,Perception,None,Normal,Auran,0.25,Dive Attack,Monster Manual,NA,Wizards of the Coast,Other,1,0";
-            fileManager.parseData(line, "Any", 6, monsterList, false, false);
+            fileManager.parseData(line, "Any", 6, monsterList, false, false, "Good");
 
             Assert.That(monsterList[0].Name, Is.EqualTo("Aarakocra"));
             Assert.That(monsterList[0].AC, Is.EqualTo(12));
@@ -33,7 +33,7 @@ namespace DeckOfManyEncounters.Tests
             FileManager fileManager = new FileManager();
             List<Monster> monsterList = new List<Monster> { };
 
-            fileManager.readData("Any", 6, monsterList, false, false);
+            fileManager.readData("Any", 6, monsterList, false, false, "Any");
 
             Assert.That(monsterList[0].Name, Is.EqualTo("Aarakocra"));
             Assert.That(monsterList[1].AC, Is.EqualTo(13));
@@ -51,7 +51,7 @@ namespace DeckOfManyEncounters.Tests
             calculationManager.AddPlayer("joe", "Ham", 4);
 
 
-            calculationManager.GetEligibleMonsters("Nine Hells", true, true, 2);
+            calculationManager.GetEligibleMonsters("Any", true, true, 2, "Good");
 
             List<Encounter> encounterList = new List<Encounter> { };
             encounterList = calculationManager.GenerateEncounters(2, 1);
@@ -69,7 +69,7 @@ namespace DeckOfManyEncounters.Tests
             calculationManager.AddPlayer("joe", "Ham", 4);
 
 
-            calculationManager.GetEligibleMonsters("Any", true, true, 2);
+            calculationManager.GetEligibleMonsters("Any", true, true, 2, "Good");
 
             List<Encounter> encounterList = new List<Encounter> { };
             encounterList = calculationManager.GenerateEncounters(2, 4);
