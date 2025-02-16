@@ -26,7 +26,7 @@ namespace DeckOfManyEncounters
                     i++;
                     encounter.AddMonster(list[j]);
                 }
-                if(j == list.Count())
+                if(j == list.Count() - 1)
                 {
                     j = 0;
                     Shuffle(list);
@@ -55,7 +55,7 @@ namespace DeckOfManyEncounters
                     i++;
                     encounter.AddMonster(list[j]);
                 }
-                if(j == list.Count)
+                if(j == list.Count - 1)
                 {
                     j = 0;
                     Shuffle(list);
@@ -101,7 +101,7 @@ namespace DeckOfManyEncounters
                     encounter.AddMonster(list[j]);
                     targetCR = smallGuys - (num - 1);
                 }
-                if (j == list.Count)
+                if (j == list.Count - 1)
                 {
                     j = 0;
                     Shuffle(list);
