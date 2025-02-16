@@ -22,48 +22,80 @@ namespace DeckOfManyEncounters
         internal EncountersDisplayForm(List<Encounter> encounterList)
         {
             InitializeComponent();
-            encounterTabs.SelectTab(0);
 
-            for(int i = 0; i < encounterList[0].MonsterList.Count(); i++)
+            for(int j = 0; j < 6; j++)
             {
-                Label monsterName = new Label();
-                monsterName.Text = encounterList[0].MonsterList[i].Name;
-                monsterName.Size = new Size(250, 23);
-                monsterName.Location = new Point(30, yPos); // Position of delete button
-                //monsterName.Click += (sender, e) => DeleteEntry(panel, deleteButton, CM1);
-
-                PictureBox monsterImage = new PictureBox();
-                switch (encounterList[0].MonsterList[i].Size)
+                encounterTabs.SelectTab(j);
+                yPos = 10;
+                for(int i = 0; i < encounterList[j].MonsterList.Count(); i++)
                 {
-                    case "Tiny":
-                    case "Small":
-                        monsterImage.Image = small;
-                        break;
-                    case "Medium":
-                        monsterImage.Image = medium;
-                        break;
-                    case "Large":
-                        monsterImage.Image = large;
-                        break;
-                    case "Huge":
-                        monsterImage.Image = huge;
-                        break;
-                    case "Gargantuan":
-                        monsterImage.Image = garg;
-                        break;
-                    default:
-                        MessageBox.Show("Failure");
-                        break;
+                    Label monsterName = new Label();
+                    monsterName.Text = encounterList[j].MonsterList[i].Name;
+                    monsterName.Size = new Size(250, 23);
+                    monsterName.Location = new Point(30, yPos); // Position of delete button
+                    //monsterName.Click += (sender, e) => DeleteEntry(panel, deleteButton, CM1);
+
+                    PictureBox monsterImage = new PictureBox();
+                    switch (encounterList[j].MonsterList[i].Size)
+                    {
+                        case "Tiny":
+                        case "Small":
+                            monsterImage.Image = small;
+                            break;
+                        case "Medium":
+                            monsterImage.Image = medium;
+                            break;
+                        case "Large":
+                            monsterImage.Image = large;
+                            break;
+                        case "Huge":
+                            monsterImage.Image = huge;
+                            break;
+                        case "Gargantuan":
+                            monsterImage.Image = garg;
+                            break;
+                        default:
+                            MessageBox.Show("Failure");
+                            break;
+                    }
+                    monsterImage.Location = new Point(280, yPos);
+                    monsterImage.Size = new Size(32, 32);
+
+                    switch(j)
+                    {
+                        case 0:
+                            panel1.Controls.Add(monsterName);
+                            panel1.Controls.Add(monsterImage);
+                            break;
+                        case 1:
+                            panel2.Controls.Add(monsterName);
+                            panel2.Controls.Add(monsterImage);
+                            break;
+                        case 2:
+                            panel3.Controls.Add(monsterName);
+                            panel3.Controls.Add(monsterImage);
+                            break;
+                        case 3:
+                            panel4.Controls.Add(monsterName);
+                            panel4.Controls.Add(monsterImage);
+                            break;
+                        case 4:
+                            panel5.Controls.Add(monsterName);
+                            panel5.Controls.Add(monsterImage);
+                            break;
+                        case 5:
+                            panel6.Controls.Add(monsterName);
+                            panel6.Controls.Add(monsterImage);
+                            break;
+
+                    }
+
+
+
+                    yPos += 40; // Adjust this value for spacing between entries
                 }
-                monsterImage.Location = new Point(280, yPos);
-                monsterImage.Size = new Size(32, 32);
-
-                panel1.Controls.Add(monsterName);
-                panel1.Controls.Add(monsterImage);
-
-
-                yPos += 40; // Adjust this value for spacing between entries
             }
+
 
         }
     }
