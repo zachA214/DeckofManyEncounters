@@ -82,7 +82,7 @@ namespace DeckOfManyEncounters
 
             else if(difficulty == 20)
             {
-                encounters = Calculations.impossible( monsterList);
+                encounters = Calculations.impossible( monsterList, creatureCount);
             }
             else
             {
