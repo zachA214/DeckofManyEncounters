@@ -33,7 +33,8 @@ namespace DeckOfManyEncounters
             else if (difficultyBox.Text == "Hard") { DifficultyValue = 1; }
             else if (difficultyBox.Text == "Very Hard") { DifficultyValue = 2; }
             else if (difficultyBox.Text == "IMPOSSIBLE") { DifficultyValue = 12; }
-            CreatureCount = CreatureCounter.Value;
+            else if (difficultyBox.Text == "WORLD ENDER") { DifficultyValue = 20; }
+                CreatureCount = CreatureCounter.Value;
             Realm = realmSelector.Text;
             flyer = flyerCheckBox.Checked;
             swimmer = swimmerCheckBox.Checked;
@@ -47,6 +48,11 @@ namespace DeckOfManyEncounters
             {
                 saveAndCloseInput.Enabled = true;
             }
+        }
+
+        private void difficultyBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void difficultyBox_TextUpdate(object sender, EventArgs e)

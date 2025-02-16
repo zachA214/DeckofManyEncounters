@@ -74,11 +74,13 @@
             "Normal",
             "Hard",
             "Very Hard",
-            "IMPOSSIBLE"});
+            "IMPOSSIBLE",
+            "WORLD ENDER"});
             this.difficultyBox.Location = new System.Drawing.Point(145, 189);
             this.difficultyBox.Name = "difficultyBox";
             this.difficultyBox.Size = new System.Drawing.Size(121, 29);
             this.difficultyBox.TabIndex = 3;
+            this.difficultyBox.SelectedIndexChanged += new System.EventHandler(this.difficultyBox_SelectedIndexChanged);
             this.difficultyBox.SelectedValueChanged += new System.EventHandler(this.difficultyBox_TextUpdate);
             // 
             // realmSelector

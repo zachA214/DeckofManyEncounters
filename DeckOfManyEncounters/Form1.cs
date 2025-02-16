@@ -15,8 +15,18 @@ namespace DeckOfManyEncounters
         public string Realm , oh = "";
         public decimal CreatureCount = 0, DifficultyValue = 0;
         public bool flyer = true, swimmer = true;
-
         public CalculationManager CM1;
+
+        private void partyButton_Click(object sender, EventArgs e)
+        {
+            PartyViewerForm partyF1 = new PartyViewerForm();
+            if(partyF1.ShowDialog() == DialogResult.OK)
+            {
+                MessageBox.Show("Party Saved\n");
+            }
+        }
+
+
         public DeckOfManyEncounters()
         {
             InitializeComponent();
