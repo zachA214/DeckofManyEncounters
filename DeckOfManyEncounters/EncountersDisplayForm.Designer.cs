@@ -37,8 +37,18 @@
             this.Encounter5 = new System.Windows.Forms.TabPage();
             this.Encounter6 = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.encounterTabs.SuspendLayout();
             this.Encounter1.SuspendLayout();
+            this.Encounter2.SuspendLayout();
+            this.Encounter3.SuspendLayout();
+            this.Encounter4.SuspendLayout();
+            this.Encounter5.SuspendLayout();
+            this.Encounter6.SuspendLayout();
             this.SuspendLayout();
             // 
             // encounterTabs
@@ -68,6 +78,7 @@
             // 
             // Encounter2
             // 
+            this.Encounter2.Controls.Add(this.panel2);
             this.Encounter2.Location = new System.Drawing.Point(4, 29);
             this.Encounter2.Name = "Encounter2";
             this.Encounter2.Padding = new System.Windows.Forms.Padding(3);
@@ -78,6 +89,7 @@
             // 
             // Encounter3
             // 
+            this.Encounter3.Controls.Add(this.panel3);
             this.Encounter3.Location = new System.Drawing.Point(4, 29);
             this.Encounter3.Name = "Encounter3";
             this.Encounter3.Size = new System.Drawing.Size(731, 382);
@@ -87,6 +99,7 @@
             // 
             // Encounter4
             // 
+            this.Encounter4.Controls.Add(this.panel4);
             this.Encounter4.Location = new System.Drawing.Point(4, 29);
             this.Encounter4.Name = "Encounter4";
             this.Encounter4.Size = new System.Drawing.Size(731, 382);
@@ -96,6 +109,7 @@
             // 
             // Encounter5
             // 
+            this.Encounter5.Controls.Add(this.panel5);
             this.Encounter5.Location = new System.Drawing.Point(4, 29);
             this.Encounter5.Name = "Encounter5";
             this.Encounter5.Size = new System.Drawing.Size(731, 382);
@@ -105,6 +119,7 @@
             // 
             // Encounter6
             // 
+            this.Encounter6.Controls.Add(this.panel6);
             this.Encounter6.Location = new System.Drawing.Point(4, 29);
             this.Encounter6.Name = "Encounter6";
             this.Encounter6.Size = new System.Drawing.Size(731, 382);
@@ -114,11 +129,50 @@
             // 
             // panel1
             // 
-            this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(725, 379);
             this.panel1.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.AutoScroll = true;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(725, 379);
+            this.panel2.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.AutoScroll = true;
+            this.panel3.Location = new System.Drawing.Point(3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(725, 379);
+            this.panel3.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.AutoScroll = true;
+            this.panel4.Location = new System.Drawing.Point(3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(725, 379);
+            this.panel4.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.AutoScroll = true;
+            this.panel5.Location = new System.Drawing.Point(3, 2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(725, 379);
+            this.panel5.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            this.panel6.AutoScroll = true;
+            this.panel6.Location = new System.Drawing.Point(3, 2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(725, 379);
+            this.panel6.TabIndex = 2;
             // 
             // EncountersDisplayForm
             // 
@@ -135,6 +189,11 @@
             this.Text = "Generated Encounters";
             this.encounterTabs.ResumeLayout(false);
             this.Encounter1.ResumeLayout(false);
+            this.Encounter2.ResumeLayout(false);
+            this.Encounter3.ResumeLayout(false);
+            this.Encounter4.ResumeLayout(false);
+            this.Encounter5.ResumeLayout(false);
+            this.Encounter6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -149,5 +208,10 @@
         private System.Windows.Forms.TabPage Encounter5;
         private System.Windows.Forms.TabPage Encounter6;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel6;
     }
 }
