@@ -76,5 +76,39 @@ namespace DeckOfManyEncounters
             sr.Close();
 
         }
+
+        //getAlignment takes in the al (alignment) and compares it with the desired alignment
+        //it returns 1 if the alignment matches, a 0 if it doesn't
+        public int getAlignment(string al, string desired)
+        {
+            int alignment = 0;
+            if (al.Contains("E") && desired == "Evil")
+            {
+                alignment = 1;
+            }
+            else if(al == "NOT GOOD" && (desired == "Neutral" || desired == "Evil"))
+            {
+                alignment = 1;
+            }
+            else if((al == "NOT LAWFUL" || al.Contains("ANY") || al == "U") && desired == "Any")
+            {
+                alignment = 1;
+            }
+            else if(al.Contains("G") && desired == "Good")
+            {
+                alignment = 1;
+            }
+            else if(al.Contains("N") && desired == "Neutral")
+            {
+                alignment = 1;
+            }
+            else if(desired == "Any")
+            {
+                alignment = 1;
+            }
+
+                return alignment;
+        }
     }
+
 }
