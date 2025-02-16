@@ -22,7 +22,7 @@ namespace DeckOfManyEncounters
 
             for(int i = 0, j = 0; i < 1; j++)
             {
-                if(intCR == list[j].ChallengeRating)
+                if(intCR == Convert.ToInt32(list[j].ChallengeRating))
                 {
                     Console.WriteLine("Into the if statement\n");
                     i++;
