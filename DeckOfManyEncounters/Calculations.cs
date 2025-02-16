@@ -122,7 +122,7 @@ namespace DeckOfManyEncounters
             return encounter;
         }
 
-        public static List<Encounter> impossible(List<Monster> list)
+        public static List<Encounter> impossible(List<Monster> list, int enemyCount)
         {
             Encounter encounter = new Encounter();
             List<Encounter> encounterList = new List<Encounter> { };
@@ -143,9 +143,12 @@ namespace DeckOfManyEncounters
                     j++;
                 }
             }
-            for(int i = 0; i < 6; i++)
+            for (int k = 0; k < enemyCount; k++)
             {
                 encounter.AddMonster(list[j]);
+            }
+            for (int i = 0; i < 6; i++)
+            {
                 encounterList.Add(encounter);
             }
             return encounterList;
