@@ -26,6 +26,12 @@ namespace DeckOfManyEncounters
                     i++;
                     encounter.AddMonster(list[j]);
                 }
+                if(j == list.Count())
+                {
+                    j = 0;
+                    Shuffle(list);
+                    CR--;
+                }
             }
             return encounter;
         }
