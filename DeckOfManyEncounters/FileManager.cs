@@ -30,7 +30,7 @@ namespace DeckOfManyEncounters
                     Monster temp = new Monster { };
                     //yay adding the data is so not tedious at all
                     temp.Name = fields[0];
-                    temp.Size = fields[1];
+                    temp.Size = fields[1].ToLower();
                     temp.Type = fields[2];
                     temp.Alignment = fields[3];
                     temp.AC = Convert.ToInt32(fields[4]);
