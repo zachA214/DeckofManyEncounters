@@ -33,11 +33,28 @@ namespace DeckOfManyEncounters
             fileManager.readData(realm, level, monsterList);
         }
 
-        internal List<Encounter> GenerateEncounters(int challengeLevel, int difficulty, int creatureCount)
+        internal List<Encounter> GenerateEncounters( int difficulty, int creatureCount)
         {
             //encounters.Add()
             //call to calculations and append to list 
-            return new List<Encounter> { };
+
+            List<Encounter> encounters = new List<Encounter>();
+
+            int level = 0;
+            foreach (Player player in party) level += player.Level;
+            level /= party.Count;
+
+            double challengeLevel = 0.25 * level * party.Count + difficulty;
+
+            encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
+            encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
+            encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
+            encounters.Add(Calculations.methodTwo(challengeLevel, creatureCount, monsterList));
+            encounters.Add(Calculations.methodTwo(challengeLevel, creatureCount, monsterList));
+            encounters.Add(Calculations.methodTwo(challengeLevel, creatureCount, monsterList));
+
+            return encounters;
+
         }
 
         
