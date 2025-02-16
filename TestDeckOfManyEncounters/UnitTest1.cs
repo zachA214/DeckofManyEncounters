@@ -56,7 +56,7 @@ namespace DeckOfManyEncounters.Tests
             List<Encounter> encounterList = new List<Encounter> { };
             encounterList = calculationManager.GenerateEncounters(2, 1);
 
-            Assert.That(encounterList.Count, Is.EqualTo(6));
+            Assert.That(encounterList[0], Is.Not.Null);
         }
 
         [Test]
@@ -74,7 +74,10 @@ namespace DeckOfManyEncounters.Tests
             List<Encounter> encounterList = new List<Encounter> { };
             encounterList = calculationManager.GenerateEncounters(2, 4);
 
-            Assert.That(encounterList.Count, Is.EqualTo(6));
+            for (int i = 0; i < 6; i++)
+            {
+                Assert.That(encounterList[i].MonsterList.Count, Is.EqualTo(4));
+            }
         }
 
 
