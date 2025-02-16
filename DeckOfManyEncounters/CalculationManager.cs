@@ -53,11 +53,12 @@ namespace DeckOfManyEncounters
         //call to data processinggggg to develope monster list 
         public void GetEligibleMonsters(string realm, bool noFly, bool noSwim, int difficulty, string alignment)
         {
+            int buffer = 3;
             monsterList.Clear();
             double level = 0;
             foreach (Player player in party) level += player.Level;
             level /= party.Count;
-            level = 0.25 * level * party.Count + difficulty;
+            level = 0.25 * level * party.Count + difficulty + buffer;
             //populate monster list with call to fileManager
             fileManager.readData(realm, (int) Math.Ceiling(level), monsterList, noFly, noSwim, alignment);
         }
