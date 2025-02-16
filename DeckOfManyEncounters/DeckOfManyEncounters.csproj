@@ -89,6 +89,12 @@
     <Compile Include="CalculationManager.cs" />
     <Compile Include="Calculations.cs" />
     <Compile Include="Encounter.cs" />
+    <Compile Include="EncountersDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncountersDisplayForm.Designer.cs">
+      <DependentUpon>EncountersDisplayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FileManager.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -118,6 +124,9 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="EncountersDisplayForm.resx">
+      <DependentUpon>EncountersDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
