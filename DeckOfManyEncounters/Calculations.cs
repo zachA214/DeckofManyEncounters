@@ -11,6 +11,24 @@ namespace DeckOfManyEncounters
         //list should be filled at this point, we now get to work with it
         //these can take the monster list as an input
 
+
+
+        //case for if we only have one monster
+        public static Encounter singleMonster(double CR, List<Monster> list)
+        {
+            Encounter encounter = new Encounter();
+            Shuffle(list);
+
+            for(int i = 0, j = 0; i < 1; j++)
+            {
+                if(CR == list[j].ChallengeRating)
+                {
+                    i++;
+                    encounter.AddMonster(list[j]);
+                }
+            }
+            return encounter;
+        }
         //method 1: assuming CR already modified by difficulty, given # of enemies (k)
         /*
         Takes max (CR), doubles it, divides by number of creatures, rounds it
