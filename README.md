@@ -25,3 +25,7 @@ Challenge rating Calculation
 0.25 * Average Party Level * Party Size + Difficulty = Recommended CR <br>
 
 Utilizing multiple algorithms for determining output, returning many outputs for each prompt so that there are variety of encounters that can be chosen from
+
+## Usage:
+
+Clone the github repo, and move the image folder, monsterimage folder, and dataset.csv to the /bin/debug folder in order to properly run
