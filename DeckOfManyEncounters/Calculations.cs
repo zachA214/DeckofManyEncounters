@@ -76,6 +76,7 @@ namespace DeckOfManyEncounters
             Encounter encounter = new Encounter { };
             Random rand = new Random();
             Shuffle(list);
+            double ogCR = CR;
 
             int smallGuys = (int)Math.Round(CR / 2);
             int num = numEnemies - 1;//max - remaining
@@ -90,7 +91,9 @@ namespace DeckOfManyEncounters
                 }
                 if (j == (list.Count - 1))
                 {
-                    i++;
+                    j = 0;
+                    Shuffle(list);
+                    CR--;
                 }
             }
 
