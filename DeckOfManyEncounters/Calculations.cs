@@ -116,6 +116,10 @@ namespace DeckOfManyEncounters
                 {
                     i++;
                 }
+                else if(j == list.Count)
+                {
+                    return encounterList;
+                }
                 else
                 {
                     j++;
