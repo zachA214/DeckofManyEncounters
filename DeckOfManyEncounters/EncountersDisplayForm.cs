@@ -39,20 +39,20 @@ namespace DeckOfManyEncounters
                     PictureBox monsterImage = new PictureBox();
                     switch (encounterList[j].MonsterList[i].Size)
                     {
-                        case "Tiny":
-                        case "Small":
+                        case "tiny":
+                        case "small":
                             monsterImage.Image = small;
                             break;
-                        case "Medium":
+                        case "medium":
                             monsterImage.Image = medium;
                             break;
-                        case "Large":
+                        case "large":
                             monsterImage.Image = large;
                             break;
-                        case "Huge":
+                        case "huge":
                             monsterImage.Image = huge;
                             break;
-                        case "Gargantuan":
+                        case "gargantuan":
                             monsterImage.Image = garg;
                             break;
                         default:
