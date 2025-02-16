@@ -43,11 +43,12 @@
             // 
             this.nameInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.nameInput.Location = new System.Drawing.Point(168, 37);
-            this.nameInput.MaxLength = 15;
+            this.nameInput.MaxLength = 20;
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(213, 26);
             this.nameInput.TabIndex = 0;
             this.nameInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nameInput.TextChanged += new System.EventHandler(this.nameInput_TextChanged);
             // 
             // classBox
             // 
@@ -70,6 +71,7 @@
             this.classBox.Name = "classBox";
             this.classBox.Size = new System.Drawing.Size(184, 28);
             this.classBox.TabIndex = 1;
+            this.classBox.SelectedValueChanged += new System.EventHandler(this.classBox_SelectedValueChanged);
             // 
             // levelBox
             // 
@@ -126,6 +128,7 @@
             // 
             // saveButton
             // 
+            this.saveButton.Enabled = false;
             this.saveButton.Location = new System.Drawing.Point(29, 193);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(143, 32);

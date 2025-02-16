@@ -37,6 +37,10 @@ namespace DeckOfManyEncounters
             saveAndExitButton.Location = new Point(this.ClientSize.Width - saveAndExitButton.Width - 10, 10); // Position the button at the top of the form
             saveAndExitButton.Click += (sender, e) => saveAndExit(sender, e);
             this.Controls.Add(saveAndExitButton); // Add generate button to form
+            for(int i = 0; i < CM1.getPartyCount(); i++)
+            {
+                addElement(myPanel, CM1, i);
+            }
         }
 
         private void saveAndExit(object sender, EventArgs e)
@@ -55,7 +59,7 @@ namespace DeckOfManyEncounters
                 addElement(panel, CM1, CM1.getPartyCount() - 1);
 
                 // Update the Y-position for the next entry
-                yPosition += 40; // Adjust this value for spacing between entries
+               
             }
             else
             {
@@ -89,6 +93,8 @@ namespace DeckOfManyEncounters
             panel.Controls.Add(nameLabel);
             panel.Controls.Add(classLabel);
             panel.Controls.Add(levelLabel);
+
+            yPosition += 40; // Adjust this value for spacing between entries
         }
         private void DeleteEntry(Panel panel, Button deleteButton, CalculationManager CM1)
         {

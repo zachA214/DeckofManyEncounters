@@ -22,7 +22,7 @@ namespace DeckOfManyEncounters
             PartyViewerForm partyF1 = new PartyViewerForm(CM1);
             if(partyF1.ShowDialog() == DialogResult.OK)
             {
-                MessageBox.Show("Party Saved\n");
+               // MessageBox.Show("Party Saved\n");
             }
         }
 
