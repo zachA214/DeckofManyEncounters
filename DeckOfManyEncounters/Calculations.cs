@@ -24,8 +24,12 @@ namespace DeckOfManyEncounters
 
             for(int i = 0, j = 0; i < 1; j++)
             {
-                if((intCR + adder) == Convert.ToInt32(list[j].ChallengeRating) ||
-                    (intCR - adder) == Convert.ToInt32(list[j].ChallengeRating))
+                if ((intCR + adder) >= list.Count - 1 || (intCR - adder) < 1)
+                {
+                    return encounter;
+                }
+                if ((intCR + adder) == Convert.ToInt32(Math.Round(list[j].ChallengeRating)) ||
+                    (intCR - adder) == Convert.ToInt32(Math.Round(list[j].ChallengeRating)))
                 {
                     i++;
                     encounter.AddMonster(list[j]);
@@ -36,6 +40,7 @@ namespace DeckOfManyEncounters
                     Shuffle(list);
                     j = 0;
                 }
+                
             }
             return encounter;
         }
