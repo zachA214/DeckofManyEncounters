@@ -80,7 +80,7 @@
             "WORLD ENDER"});
             this.difficultyBox.Location = new System.Drawing.Point(145, 189);
             this.difficultyBox.Name = "difficultyBox";
-            this.difficultyBox.Size = new System.Drawing.Size(121, 29);
+            this.difficultyBox.Size = new System.Drawing.Size(121, 34);
             this.difficultyBox.TabIndex = 3;
             this.difficultyBox.SelectedIndexChanged += new System.EventHandler(this.difficultyBox_SelectedIndexChanged);
             this.difficultyBox.SelectedValueChanged += new System.EventHandler(this.difficultyBox_TextUpdate);
@@ -98,7 +98,7 @@
             "Any"});
             this.realmSelector.Location = new System.Drawing.Point(16, 189);
             this.realmSelector.Name = "realmSelector";
-            this.realmSelector.Size = new System.Drawing.Size(121, 29);
+            this.realmSelector.Size = new System.Drawing.Size(121, 34);
             this.realmSelector.TabIndex = 5;
             this.realmSelector.SelectedIndexChanged += new System.EventHandler(this.realmSelector_SelectedIndexChanged);
             // 
@@ -108,7 +108,7 @@
             this.realmLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.realmLabel.Location = new System.Drawing.Point(50, 151);
             this.realmLabel.Name = "realmLabel";
-            this.realmLabel.Size = new System.Drawing.Size(54, 21);
+            this.realmLabel.Size = new System.Drawing.Size(73, 29);
             this.realmLabel.TabIndex = 6;
             this.realmLabel.Text = "Realm";
             // 
@@ -119,7 +119,7 @@
             this.creatureCountLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.creatureCountLabel.Location = new System.Drawing.Point(147, 238);
             this.creatureCountLabel.Name = "creatureCountLabel";
-            this.creatureCountLabel.Size = new System.Drawing.Size(116, 21);
+            this.creatureCountLabel.Size = new System.Drawing.Size(161, 29);
             this.creatureCountLabel.TabIndex = 7;
             this.creatureCountLabel.Text = "Creature Count";
             // 
@@ -138,7 +138,7 @@
             0,
             0});
             this.CreatureCounter.Name = "CreatureCounter";
-            this.CreatureCounter.Size = new System.Drawing.Size(121, 28);
+            this.CreatureCounter.Size = new System.Drawing.Size(121, 35);
             this.CreatureCounter.TabIndex = 8;
             this.CreatureCounter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CreatureCounter.Value = new decimal(new int[] {
@@ -153,7 +153,7 @@
             this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(44, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 21);
+            this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 9;
             // 
             // difficultyLabel
@@ -162,7 +162,7 @@
             this.difficultyLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.difficultyLabel.Location = new System.Drawing.Point(170, 151);
             this.difficultyLabel.Name = "difficultyLabel";
-            this.difficultyLabel.Size = new System.Drawing.Size(72, 21);
+            this.difficultyLabel.Size = new System.Drawing.Size(97, 29);
             this.difficultyLabel.TabIndex = 10;
             this.difficultyLabel.Text = "Difficulty";
             // 
@@ -171,9 +171,8 @@
             this.swimmerCheckBox.AutoSize = true;
             this.swimmerCheckBox.Location = new System.Drawing.Point(167, 79);
             this.swimmerCheckBox.Name = "swimmerCheckBox";
-            this.swimmerCheckBox.Size = new System.Drawing.Size(109, 25);
+            this.swimmerCheckBox.Size = new System.Drawing.Size(28, 27);
             this.swimmerCheckBox.TabIndex = 11;
-            this.swimmerCheckBox.Text = "checkBox1";
             this.swimmerCheckBox.UseVisualStyleBackColor = true;
             // 
             // flyerCheckBox
@@ -181,9 +180,8 @@
             this.flyerCheckBox.AutoSize = true;
             this.flyerCheckBox.Location = new System.Drawing.Point(167, 35);
             this.flyerCheckBox.Name = "flyerCheckBox";
-            this.flyerCheckBox.Size = new System.Drawing.Size(109, 25);
+            this.flyerCheckBox.Size = new System.Drawing.Size(28, 27);
             this.flyerCheckBox.TabIndex = 12;
-            this.flyerCheckBox.Text = "checkBox2";
             this.flyerCheckBox.UseVisualStyleBackColor = true;
             // 
             // swimmerLabel
@@ -192,7 +190,7 @@
             this.swimmerLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.swimmerLabel.Location = new System.Drawing.Point(17, 80);
             this.swimmerLabel.Name = "swimmerLabel";
-            this.swimmerLabel.Size = new System.Drawing.Size(134, 21);
+            this.swimmerLabel.Size = new System.Drawing.Size(184, 29);
             this.swimmerLabel.TabIndex = 13;
             this.swimmerLabel.Text = "Ignore Swimming";
             // 
@@ -202,7 +200,7 @@
             this.flyerLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.flyerLabel.Location = new System.Drawing.Point(36, 39);
             this.flyerLabel.Name = "flyerLabel";
-            this.flyerLabel.Size = new System.Drawing.Size(101, 21);
+            this.flyerLabel.Size = new System.Drawing.Size(140, 29);
             this.flyerLabel.TabIndex = 14;
             this.flyerLabel.Text = "Ignore Flying";
             // 
@@ -217,7 +215,7 @@
             "Any"});
             this.alignmentBox.Location = new System.Drawing.Point(16, 275);
             this.alignmentBox.Name = "alignmentBox";
-            this.alignmentBox.Size = new System.Drawing.Size(121, 29);
+            this.alignmentBox.Size = new System.Drawing.Size(121, 34);
             this.alignmentBox.TabIndex = 15;
             this.alignmentBox.SelectedValueChanged += new System.EventHandler(this.alignmentBox_SelectedValueChanged);
             // 
@@ -227,14 +225,14 @@
             this.alignLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.alignLabel.Location = new System.Drawing.Point(36, 238);
             this.alignLabel.Name = "alignLabel";
-            this.alignLabel.Size = new System.Drawing.Size(82, 21);
+            this.alignLabel.Size = new System.Drawing.Size(112, 29);
             this.alignLabel.TabIndex = 16;
             this.alignLabel.Text = "Alignment";
             // 
             // InputForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(179)))), ((int)(((byte)(208)))));
             this.ClientSize = new System.Drawing.Size(278, 394);
             this.Controls.Add(this.alignLabel);
             this.Controls.Add(this.alignmentBox);
