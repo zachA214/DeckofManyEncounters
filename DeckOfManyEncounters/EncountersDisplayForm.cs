@@ -35,6 +35,7 @@ namespace DeckOfManyEncounters
                 PictureBox monsterImage = new PictureBox();
                 switch (encounterList[0].MonsterList[i].Size)
                 {
+                    case "Tiny":
                     case "Small":
                         monsterImage.Image = small;
                         break;
@@ -50,9 +51,12 @@ namespace DeckOfManyEncounters
                     case "Gargantuan":
                         monsterImage.Image = garg;
                         break;
+                    default:
+                        MessageBox.Show("Failure");
+                        break;
                 }
                 monsterImage.Location = new Point(280, yPos);
-                monsterImage.Size = new Size(60, 60);
+                monsterImage.Size = new Size(32, 32);
 
                 panel1.Controls.Add(monsterName);
                 panel1.Controls.Add(monsterImage);
