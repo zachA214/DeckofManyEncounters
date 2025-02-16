@@ -20,6 +20,7 @@ namespace DeckOfManyEncounters
             Encounter encounter = new Encounter();
             int intCR = (int)Math.Round(CR);
             int adder = 0;
+            MessageBox.Show($"{list[0].Name}");
             Shuffle(list);
 
             for(int i = 0, j = 0; i < 1; j++)
@@ -77,13 +78,13 @@ namespace DeckOfManyEncounters
          */
         public static Encounter methodTwo(double CR, int numEnemies, List<Monster> list)
         {
+            CR = (int)Math.Round(CR);
             Encounter encounter = new Encounter { };
             Random rand = new Random();
             Shuffle(list);
             double ogCR = CR;
 
             int smallGuys = Math.Max(1, (int)Math.Round(CR / 2));
-           // MessageBox.Show($"{CR}");
             int num = numEnemies - 1;//max - remaining
             //between 1 and max - remaining
             //loop to get the big guy
