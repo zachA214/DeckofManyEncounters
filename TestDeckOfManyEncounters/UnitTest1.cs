@@ -38,7 +38,9 @@ namespace DeckOfManyEncounters.Tests
             Assert.That(monsterList[0].Name, Is.EqualTo("Aarakocra"));
             Assert.That(monsterList[1].AC, Is.EqualTo(13));
             Assert.That(monsterList[2].HP, Is.EqualTo(49));
-            Assert.That(monsterList[0].ChallengeRating, Is.EqualTo(1.00));
+            Assert.That(monsterList[2].ChallengeRating, Is.EqualTo(1.00));
         }
+
+
     }
 }
