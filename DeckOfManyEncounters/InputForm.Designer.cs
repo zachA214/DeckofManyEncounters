@@ -43,6 +43,8 @@
             this.flyerCheckBox = new System.Windows.Forms.CheckBox();
             this.swimmerLabel = new System.Windows.Forms.Label();
             this.flyerLabel = new System.Windows.Forms.Label();
+            this.alignmentBox = new System.Windows.Forms.ComboBox();
+            this.alignLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.CreatureCounter)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +117,7 @@
             this.creatureCountLabel.AutoSize = true;
             this.creatureCountLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.creatureCountLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.creatureCountLabel.Location = new System.Drawing.Point(78, 242);
+            this.creatureCountLabel.Location = new System.Drawing.Point(147, 238);
             this.creatureCountLabel.Name = "creatureCountLabel";
             this.creatureCountLabel.Size = new System.Drawing.Size(116, 21);
             this.creatureCountLabel.TabIndex = 7;
@@ -124,7 +126,7 @@
             // CreatureCounter
             // 
             this.CreatureCounter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CreatureCounter.Location = new System.Drawing.Point(68, 276);
+            this.CreatureCounter.Location = new System.Drawing.Point(145, 276);
             this.CreatureCounter.Maximum = new decimal(new int[] {
             8,
             0,
@@ -136,7 +138,7 @@
             0,
             0});
             this.CreatureCounter.Name = "CreatureCounter";
-            this.CreatureCounter.Size = new System.Drawing.Size(150, 28);
+            this.CreatureCounter.Size = new System.Drawing.Size(121, 28);
             this.CreatureCounter.TabIndex = 8;
             this.CreatureCounter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CreatureCounter.Value = new decimal(new int[] {
@@ -204,11 +206,38 @@
             this.flyerLabel.TabIndex = 14;
             this.flyerLabel.Text = "Ignore Flying";
             // 
+            // alignmentBox
+            // 
+            this.alignmentBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.alignmentBox.FormattingEnabled = true;
+            this.alignmentBox.Items.AddRange(new object[] {
+            "Evil",
+            "Neutral",
+            "Good",
+            "Any"});
+            this.alignmentBox.Location = new System.Drawing.Point(16, 275);
+            this.alignmentBox.Name = "alignmentBox";
+            this.alignmentBox.Size = new System.Drawing.Size(121, 29);
+            this.alignmentBox.TabIndex = 15;
+            this.alignmentBox.SelectedValueChanged += new System.EventHandler(this.alignmentBox_SelectedValueChanged);
+            // 
+            // alignLabel
+            // 
+            this.alignLabel.AutoSize = true;
+            this.alignLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.alignLabel.Location = new System.Drawing.Point(36, 238);
+            this.alignLabel.Name = "alignLabel";
+            this.alignLabel.Size = new System.Drawing.Size(82, 21);
+            this.alignLabel.TabIndex = 16;
+            this.alignLabel.Text = "Alignment";
+            // 
             // InputForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(278, 394);
+            this.Controls.Add(this.alignLabel);
+            this.Controls.Add(this.alignmentBox);
             this.Controls.Add(this.flyerLabel);
             this.Controls.Add(this.swimmerLabel);
             this.Controls.Add(this.flyerCheckBox);
@@ -249,5 +278,7 @@
         private System.Windows.Forms.CheckBox flyerCheckBox;
         private System.Windows.Forms.Label swimmerLabel;
         private System.Windows.Forms.Label flyerLabel;
+        private System.Windows.Forms.ComboBox alignmentBox;
+        private System.Windows.Forms.Label alignLabel;
     }
 }

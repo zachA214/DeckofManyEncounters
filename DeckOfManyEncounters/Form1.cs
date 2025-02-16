@@ -12,7 +12,7 @@ namespace DeckOfManyEncounters
 {
     public partial class DeckOfManyEncounters : Form
     {
-        public string Realm , oh = "";
+        public string Realm = "", Alignment = "";
         public int CreatureCount = 0, DifficultyValue = 0;
         public bool flyer = true, swimmer = true;
         internal CalculationManager CM1 = new CalculationManager();
@@ -101,8 +101,9 @@ namespace DeckOfManyEncounters
                 this.Realm = inputF1.Realm;
                 this.flyer = inputF1.flyer;
                 this.swimmer = inputF1.swimmer;
+                this.Alignment = inputF1.Alignment;
 
-                MessageBox.Show($"Difficulty: {DifficultyValue}\nCreature Count: {this.CreatureCount}\nRealm: {this.Realm}\nFlyers?: {this.flyer}\nSwimmers?: {this.swimmer}");
+                MessageBox.Show($"Difficulty: {DifficultyValue}\nCreature Count: {this.CreatureCount}\nRealm: {this.Realm}\nFlyers?: {this.flyer}\nSwimmers?: {this.swimmer}\Alignment: {this.Alignment}");
             }
         }
     }
