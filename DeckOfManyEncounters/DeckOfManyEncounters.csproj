@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="CalculationManager.cs" />
     <Compile Include="Calculations.cs" />
+    <Compile Include="Encounter.cs" />
     <Compile Include="FileManager.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

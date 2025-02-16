@@ -21,10 +21,10 @@ namespace DeckOfManyEncounters
             party.Add(new Player(name, classification, level));
         }
 
-        //call to data processinggggg
+        //call to data processinggggg to develope monster list 
 
         public List<string> GenerateEncounters(int challengeLevel, int difficulty, 
-            bool yesSwimming, bool yesFlying, int creatureCount)
+            bool yesSwimming, bool yesFlying, int creatureCount, string realm)
         {
             //encounters.Add()
             //call to calculations and append to list 
