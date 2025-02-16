@@ -100,7 +100,5 @@ namespace DeckOfManyEncounters
         private string realm = string.Empty;
 
         public string Realm { get { return realm; } set { realm = value; } }
-
-  
     }
 }
