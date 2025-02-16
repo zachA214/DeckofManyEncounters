@@ -23,6 +23,22 @@ namespace DeckOfManyEncounters
             party.Add(new Player(name, classification, level));
         }
 
+        public void RemovePlayer(int index)
+        {
+            party.RemoveAt(index);
+        }
+
+        public void RemovePlayer(string name)
+        {
+            foreach (var player in party)
+            {
+                if (player.Name == name)
+                {
+                    party.Remove(player);
+                }
+            }
+        }
+
         //call to data processinggggg to develope monster list 
         public void GetEligibleMonsters(string realm)
         {
