@@ -20,10 +20,13 @@ namespace DeckOfManyEncounters.Tests
             string line = "Aarakocra,Medium,Humanoid,NG,12,13,20;50 fly,10,14,10,11,12,11,None,Perception,None,Normal,Auran,0.25,Dive Attack,Monster Manual,NA,Wizards of the Coast,Other,1,0";
             fileManager.parseData(line, "Any", 6, monsterList, false, false, "Good");
 
-            Assert.That(monsterList[0].Name, Is.EqualTo("Aarakocra"));
-            Assert.That(monsterList[0].AC, Is.EqualTo(12));
-            Assert.That(monsterList[0].HP, Is.EqualTo(13));
-            Assert.That(monsterList[0].ChallengeRating, Is.EqualTo(0.25));
+            Assert.Multiple(() =>
+            {
+                Assert.That(monsterList[0].Name, Is.EqualTo("Aarakocra"));
+                Assert.That(monsterList[0].AC, Is.EqualTo(12));
+                Assert.That(monsterList[0].HP, Is.EqualTo(13));
+                Assert.That(monsterList[0].ChallengeRating, Is.EqualTo(0.25));
+            });
 
         }
 
@@ -35,10 +38,14 @@ namespace DeckOfManyEncounters.Tests
 
             fileManager.readData("Any", 6, monsterList, false, false, "Any");
 
-            Assert.That(monsterList[0].Name, Is.EqualTo("Aarakocra"));
-            Assert.That(monsterList[1].AC, Is.EqualTo(13));
-            Assert.That(monsterList[2].HP, Is.EqualTo(49));
-            Assert.That(monsterList[2].ChallengeRating, Is.EqualTo(1.00));
+            
+            Assert.Multiple(() =>
+            {
+                Assert.That(monsterList[0].Name, Is.EqualTo("Aarakocra"));
+                Assert.That(monsterList[1].AC, Is.EqualTo(13));
+                Assert.That(monsterList[2].HP, Is.EqualTo(49));
+                Assert.That(monsterList[2].ChallengeRating, Is.EqualTo(1.00));
+            });
         }
 
         [Test]
