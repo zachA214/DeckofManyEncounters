@@ -17,7 +17,7 @@ namespace DeckOfManyEncounters
         That is the CR of the monsters we pull
         CR 12, 3 monsters. 3 CR 8 monsters
          */
-        public List<Monster> methodOne(double CR, int numEnemies, List<Monster> list)
+        public static List<Monster> methodOne(double CR, int numEnemies, List<Monster> list)
         {
             List<Monster> encounter = new List<Monster> { };
             double monsterCR = (CR * 2) / numEnemies;
@@ -41,7 +41,7 @@ namespace DeckOfManyEncounters
         One that's equal to max
         One guy with CR 12, leftovers where total CR adds up to 12 (maybe half?)
          */
-        public List<Monster> methodTwo(double CR, int numEnemies, List<Monster> list)
+        public static List<Monster> methodTwo(double CR, int numEnemies, List<Monster> list)
         {
             List<Monster> encounter = new List<Monster> { };
             Random rand = new Random();

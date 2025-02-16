@@ -34,7 +34,7 @@
             // 
             // inputFormOpenButton
             // 
-            this.inputFormOpenButton.Location = new System.Drawing.Point(657, 343);
+            this.inputFormOpenButton.Location = new System.Drawing.Point(665, 339);
             this.inputFormOpenButton.Name = "inputFormOpenButton";
             this.inputFormOpenButton.Size = new System.Drawing.Size(157, 44);
             this.inputFormOpenButton.TabIndex = 0;
