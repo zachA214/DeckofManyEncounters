@@ -18,6 +18,16 @@ namespace DeckOfManyEncounters
 
         private List<Player> party = new List<Player> { };
 
+        public int getPartyCount()
+        {
+            return party.Count;
+        }
+
+        public int getMonsterListCount()
+        {
+            return monsterList.Count;
+        }
+
         public void AddPlayer(string name, string classification, int level)
         {
             party.Add(new Player(name, classification, level));
