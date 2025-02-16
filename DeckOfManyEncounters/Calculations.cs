@@ -39,8 +39,8 @@ namespace DeckOfManyEncounters
         public static Encounter methodOne(double CR, int numEnemies, List<Monster> list)
         {
             Encounter encounter = new Encounter { };
-            double monsterCR = (CR * 2) / numEnemies;
-            monsterCR = Math.Round(monsterCR);
+            double mCR = (CR * 2) / numEnemies;
+            int monsterCR = (int)Math.Round(mCR);
             Shuffle(list);
             for(int i = 0, j = 0; i < numEnemies; j++)
             {
@@ -71,7 +71,7 @@ namespace DeckOfManyEncounters
             Random rand = new Random();
             Shuffle(list);
 
-            double smallGuys = Math.Round(CR / 2);
+            int smallGuys = (int)Math.Round(CR / 2);
             int num = numEnemies - 1;//max - remaining
             //between 1 and max - remaining
             //loop to get the big guy

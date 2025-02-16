@@ -17,8 +17,8 @@ namespace DeckOfManyEncounters
             var fields = line.Split(',');//splits the line into an array, using ',' as the delimiter
 
             //condition filters out to the enemies that are desired based on CR and location
-            if ((location == fields[23] && CR <= Convert.ToDouble(fields[18])) || 
-                (location == "Any" && CR <= Convert.ToDouble(fields[18])))
+            if ((location == fields[23] && CR >= Convert.ToDouble(fields[18])) || 
+                (location == "Any" && CR >= Convert.ToDouble(fields[18])))
             {
                 //Empty conditionals so that we skip past flying or swimming enemies if user wants to omit them
                 if (fly == true && Convert.ToBoolean(fields[24]) == true);
