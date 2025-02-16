@@ -11,7 +11,7 @@ namespace DeckOfManyEncounters
         //list should be filled at this point, we now get to work with it
         //these can take the monster list as an input
 
-
+        //want case for if we make it to end of list and we still need more
 
         //case for if we only have one monster
         public static Encounter singleMonster(double CR, List<Monster> list)
@@ -48,6 +48,11 @@ namespace DeckOfManyEncounters
                 {
                     i++;
                     encounter.AddMonster(list[j]);
+                }
+                if(j == list.Count)
+                {
+                    j = 0;
+                    Shuffle(list);
                 }
             }
 
@@ -89,6 +94,11 @@ namespace DeckOfManyEncounters
                     num--;
                     encounter.AddMonster(list[j]);
                     targetCR = smallGuys - (num - 1);
+                }
+                if (j == list.Count)
+                {
+                    j = 0;
+                    Shuffle(list);
                 }
             }
             return encounter;
