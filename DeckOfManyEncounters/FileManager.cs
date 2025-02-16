@@ -90,7 +90,7 @@ namespace DeckOfManyEncounters
             {
                 alignment = 1;
             }
-            else if((al == "NOT LAWFUL" || al.Contains("ANY") || al == "U") && desired == "Any")
+            else if((al == "NOT LAWFUL" || al.Contains("ANY") || al == "U"))
             {
                 alignment = 1;
             }
