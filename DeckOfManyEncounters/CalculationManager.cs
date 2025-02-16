@@ -40,13 +40,14 @@ namespace DeckOfManyEncounters
         }
 
         //call to data processinggggg to develope monster list 
-        public void GetEligibleMonsters(string realm, bool noFly, bool noSwim)
+        public void GetEligibleMonsters(string realm, bool noFly, bool noSwim, int difficulty)
         {
-            int level = 0;
+            double level = 0;
             foreach (Player player in party) level += player.Level;
             level /= party.Count;
+            level = 0.25 * level * party.Count + difficulty;
             //populate monster list with call to fileManager
-            fileManager.readData(realm, level, monsterList, noFly, noSwim);
+            fileManager.readData(realm, (int) Math.Ceiling(level), monsterList, noFly, noSwim);
         }
 
         internal List<Encounter> GenerateEncounters( int difficulty, int creatureCount)
