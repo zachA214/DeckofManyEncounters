@@ -51,7 +51,7 @@ namespace DeckOfManyEncounters.Tests
             calculationManager.AddPlayer("joe", "Ham", 4);
 
 
-            calculationManager.GetEligibleMonsters("Any", true, true, 2);
+            calculationManager.GetEligibleMonsters("Nine Hells", true, true, 2);
 
             List<Encounter> encounterList = new List<Encounter> { };
             encounterList = calculationManager.GenerateEncounters(2, 1);
