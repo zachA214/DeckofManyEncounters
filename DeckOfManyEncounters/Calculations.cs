@@ -8,5 +8,7 @@ namespace DeckOfManyEncounters
 {
     class Calculations
     {
+        //list should be filled at this point, we now get to work with it
+        
     }
 }
