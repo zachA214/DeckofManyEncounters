@@ -123,7 +123,6 @@ namespace DeckOfManyEncounters
             {
                 if ((int)Math.Round(list[j].ChallengeRating) == targetCR)
                 {
-                    MessageBox.Show($"found match targetCR is {targetCR}");
                     num--;
                     encounter.AddMonster(list[j]);
                     targetCR = Math.Max(1, smallGuys - (Math.Max(0, num - 1)));
