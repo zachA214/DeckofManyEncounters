@@ -54,12 +54,15 @@
             // 
             // saveAndCloseInput
             // 
+            this.saveAndCloseInput.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.saveAndCloseInput.Enabled = false;
+            this.saveAndCloseInput.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.saveAndCloseInput.Location = new System.Drawing.Point(145, 365);
             this.saveAndCloseInput.Name = "saveAndCloseInput";
             this.saveAndCloseInput.Size = new System.Drawing.Size(131, 26);
             this.saveAndCloseInput.TabIndex = 2;
             this.saveAndCloseInput.Text = "Save and Close";
-            this.saveAndCloseInput.UseVisualStyleBackColor = true;
+            this.saveAndCloseInput.UseVisualStyleBackColor = false;
             this.saveAndCloseInput.Click += new System.EventHandler(this.saveAndCloseInput_Click);
             // 
             // difficultyBox
@@ -76,6 +79,7 @@
             this.difficultyBox.Name = "difficultyBox";
             this.difficultyBox.Size = new System.Drawing.Size(121, 29);
             this.difficultyBox.TabIndex = 3;
+            this.difficultyBox.SelectedValueChanged += new System.EventHandler(this.difficultyBox_TextUpdate);
             // 
             // realmSelector
             // 
@@ -91,6 +95,7 @@
             this.realmSelector.Name = "realmSelector";
             this.realmSelector.Size = new System.Drawing.Size(121, 29);
             this.realmSelector.TabIndex = 5;
+            this.realmSelector.SelectedIndexChanged += new System.EventHandler(this.realmSelector_SelectedIndexChanged);
             // 
             // realmLabel
             // 

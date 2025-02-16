@@ -17,6 +17,8 @@ namespace DeckOfManyEncounters
         public string Realm { get; set; }
         public bool flyer { get; set; }
         public bool swimmer { get; set; }
+
+        private bool difUpdate = false, realmUpdate = false;
         public InputForm()
         {
             InitializeComponent();
@@ -36,6 +38,24 @@ namespace DeckOfManyEncounters
             flyer = flyerCheckBox.Checked;
             swimmer = swimmerCheckBox.Checked;
             this.Close();
+        }
+
+        private void realmSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            realmUpdate = true;
+            if (difUpdate == true && realmUpdate == true)
+            {
+                saveAndCloseInput.Enabled = true;
+            }
+        }
+
+        private void difficultyBox_TextUpdate(object sender, EventArgs e)
+        {
+            difUpdate = true;
+            if(difUpdate == true && realmUpdate == true)
+            {
+                saveAndCloseInput.Enabled = true;
+            }
         }
     }
 }
