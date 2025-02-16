@@ -130,6 +130,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EncountersDisplayForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Generated Encounters";
             this.encounterTabs.ResumeLayout(false);
             this.Encounter1.ResumeLayout(false);
