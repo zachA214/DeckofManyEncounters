@@ -15,7 +15,7 @@ namespace DeckOfManyEncounters
         public string Realm , oh = "";
         public int CreatureCount = 0, DifficultyValue = 0;
         public bool flyer = true, swimmer = true;
-        public CalculationManager CM1;
+        internal CalculationManager CM1 = new CalculationManager();
 
         private void partyButton_Click(object sender, EventArgs e)
         {
