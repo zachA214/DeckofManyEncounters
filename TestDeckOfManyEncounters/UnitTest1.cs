@@ -87,6 +87,26 @@ namespace DeckOfManyEncounters.Tests
             }
         }
 
+        [Test]
+        public void TestGenEncounterManyMonsterOnePlayer()
+        {
+            CalculationManager calculationManager = new CalculationManager();
+
+            calculationManager.AddPlayer("joe", "Ham", 1);
+           
+
+
+            calculationManager.GetEligibleMonsters("Any", true, true, 0, "Any");
+
+            List<Encounter> encounterList = new List<Encounter> { };
+            encounterList = calculationManager.GenerateEncounters(0, 8);
+
+            for (int i = 0; i < 6; i++)
+            {
+                Assert.That(encounterList[i].MonsterList.Count, Is.EqualTo(8));
+            }
+        }
+
 
     }
 }
