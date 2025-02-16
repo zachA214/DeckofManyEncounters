@@ -34,11 +34,11 @@
             // 
             // inputFormOpenButton
             // 
-            this.inputFormOpenButton.Location = new System.Drawing.Point(665, 339);
+            this.inputFormOpenButton.Location = new System.Drawing.Point(687, 294);
             this.inputFormOpenButton.Name = "inputFormOpenButton";
             this.inputFormOpenButton.Size = new System.Drawing.Size(157, 44);
             this.inputFormOpenButton.TabIndex = 0;
-            this.inputFormOpenButton.Text = "Input form here";
+            this.inputFormOpenButton.Text = "Encounter Input";
             this.inputFormOpenButton.UseVisualStyleBackColor = true;
             this.inputFormOpenButton.Click += new System.EventHandler(this.inputFormOpenButton_Click);
             // 

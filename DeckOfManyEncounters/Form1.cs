@@ -15,6 +15,8 @@ namespace DeckOfManyEncounters
         public string Realm , oh = "";
         public decimal CreatureCount = 0, DifficultyValue = 0;
         public bool flyer = true, swimmer = true;
+
+        public CalculationManager CM1;
         public DeckOfManyEncounters()
         {
             InitializeComponent();
