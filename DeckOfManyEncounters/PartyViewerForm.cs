@@ -58,22 +58,22 @@ namespace DeckOfManyEncounters
                 deleteButton.Click += (sender, e) => DeleteEntry(panel, deleteButton);
 
                 Label nameLabel = new Label();
-                nameLabel.Text = "Name: " + "hi";
+                nameLabel.Text = "Name: " + CM1.party[CM1.getPartyCount() - 1].Name;
                 nameLabel.Location = new Point(100, yPosition); // Position of Name label
 
-                Label titleLabel = new Label();
-                titleLabel.Text = "Title: Mr.";
-                titleLabel.Location = new Point(250, yPosition); // Position of Title label
+                Label classLabel = new Label();
+                classLabel.Text = "Class: " + CM1.party[CM1.getPartyCount() - 1].Classification;
+                classLabel.Location = new Point(250, yPosition); // Position of Title label
 
-                Label ageLabel = new Label();
-                ageLabel.Text = "Age: 30";
-                ageLabel.Location = new Point(400, yPosition); // Position of Age label
+                Label levelLabel = new Label();
+                levelLabel.Text = "Level: " + CM1.party[CM1.getPartyCount() - 1].Level;
+                levelLabel.Location = new Point(400, yPosition); // Position of Age label
 
                 // Add controls to the panel
                 panel.Controls.Add(deleteButton);
                 panel.Controls.Add(nameLabel);
-                panel.Controls.Add(titleLabel);
-                panel.Controls.Add(ageLabel);
+                panel.Controls.Add(classLabel);
+                panel.Controls.Add(levelLabel);
 
                 // Update the Y-position for the next entry
                 yPosition += 40; // Adjust this value for spacing between entries
