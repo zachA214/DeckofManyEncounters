@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DeckOfManyEncounters));
             this.inputFormOpenButton = new System.Windows.Forms.Button();
             this.partyButton = new System.Windows.Forms.Button();
+            this.encounterGenerationButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // inputFormOpenButton
@@ -53,12 +54,23 @@
             this.partyButton.UseVisualStyleBackColor = true;
             this.partyButton.Click += new System.EventHandler(this.partyButton_Click);
             // 
+            // encounterGenerationButton
+            // 
+            this.encounterGenerationButton.Location = new System.Drawing.Point(401, 462);
+            this.encounterGenerationButton.Name = "encounterGenerationButton";
+            this.encounterGenerationButton.Size = new System.Drawing.Size(210, 66);
+            this.encounterGenerationButton.TabIndex = 2;
+            this.encounterGenerationButton.Text = "Generate Encounters";
+            this.encounterGenerationButton.UseVisualStyleBackColor = true;
+            this.encounterGenerationButton.Click += new System.EventHandler(this.encounterGenerationButton_Click);
+            // 
             // DeckOfManyEncounters
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(1002, 712);
+            this.Controls.Add(this.encounterGenerationButton);
             this.Controls.Add(this.partyButton);
             this.Controls.Add(this.inputFormOpenButton);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
@@ -78,6 +90,7 @@
 
         private System.Windows.Forms.Button inputFormOpenButton;
         private System.Windows.Forms.Button partyButton;
+        private System.Windows.Forms.Button encounterGenerationButton;
     }
 }
 

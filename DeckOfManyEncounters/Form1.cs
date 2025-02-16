@@ -16,6 +16,7 @@ namespace DeckOfManyEncounters
         public int CreatureCount = 0, DifficultyValue = 0;
         public bool flyer = true, swimmer = true;
         internal CalculationManager CM1 = new CalculationManager();
+        internal List<Encounter> encounterList = new List<Encounter> { };
 
         private void partyButton_Click(object sender, EventArgs e)
         {
@@ -27,6 +28,28 @@ namespace DeckOfManyEncounters
             }
         }
 
+        private void encounterGenerationButton_Click(object sender, EventArgs e)
+        {
+            // Create encounters or display warning box if party not filled and encounters not entered
+            if (CreatureCount != 0 && CM1.party.Count() > 0)
+            {
+                MessageBox.Show("Working");
+                CM1.GetEligibleMonsters(Realm, flyer, swimmer, DifficultyValue);
+                encounterList = CM1.GenerateEncounters(DifficultyValue, CreatureCount);
+            }
+            else if(CreatureCount != 0)
+            {
+                MessageBox.Show("Error: Party is empty");
+            }
+            else if(CM1.party.Count() > 0)
+            {
+                MessageBox.Show("Error: No encounter details selected");
+            }
+            else
+            {
+                MessageBox.Show("Error: Party empty and no encounter details selected");
+            }
+        }
 
         public DeckOfManyEncounters()
         {
