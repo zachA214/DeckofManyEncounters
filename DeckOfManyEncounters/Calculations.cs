@@ -17,6 +17,8 @@ namespace DeckOfManyEncounters
         public static Encounter singleMonster(double CR, List<Monster> list)
         {
             Encounter encounter = new Encounter();
+            double ogCR = CR;
+            int issue = 0;
             Shuffle(list);
 
             for(int i = 0, j = 0; i < 1; j++)
@@ -26,12 +28,24 @@ namespace DeckOfManyEncounters
                     i++;
                     encounter.AddMonster(list[j]);
                 }
-                if(j == list.Count() - 1)
+                if(j == list.Count() - 1 && issue != 1)
                 {
                     j = 0;
                     Shuffle(list);
                     CR--;
                 }
+                else
+                {
+                    j = 0;
+                    Shuffle(list);
+                    CR++;
+                }
+                if (CR == 0 && j == list.Count() - 1)
+                {
+                    issue = 1;
+                    CR = ogCR + 1;
+                }
+                
             }
             return encounter;
         }
