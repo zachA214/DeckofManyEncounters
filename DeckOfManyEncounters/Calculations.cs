@@ -104,6 +104,31 @@ namespace DeckOfManyEncounters
             return encounter;
         }
 
+        public static List<Encounter> impossible(List<Monster> list)
+        {
+            Encounter encounter = new Encounter();
+            List<Encounter> encounterList = new List<Encounter> { };
+            int j = 0;
+            
+            for(int i = 0; i < 1;)
+            {
+                if (list[j].Name == "Tarrasque")
+                {
+                    i++;
+                }
+                else
+                {
+                    j++;
+                }
+            }
+            for(int i = 0; i < 6; i++)
+            {
+                encounter.AddMonster(list[j]);
+                encounterList.Add(encounter);
+            }
+            return encounterList;
+        }
+
 
 
         private static void Shuffle<T>(List<T> list)
