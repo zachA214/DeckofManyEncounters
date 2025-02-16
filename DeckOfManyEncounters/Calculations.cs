@@ -11,6 +11,24 @@ namespace DeckOfManyEncounters
         //list should be filled at this point, we now get to work with it
         //these can take the monster list as an input
 
+        //want case for if we make it to end of list and we still need more
+
+        //case for if we only have one monster
+        public static Encounter singleMonster(double CR, List<Monster> list)
+        {
+            Encounter encounter = new Encounter();
+            Shuffle(list);
+
+            for(int i = 0, j = 0; i < 1; j++)
+            {
+                if(CR == list[j].ChallengeRating)
+                {
+                    i++;
+                    encounter.AddMonster(list[j]);
+                }
+            }
+            return encounter;
+        }
         //method 1: assuming CR already modified by difficulty, given # of enemies (k)
         /*
         Takes max (CR), doubles it, divides by number of creatures, rounds it
@@ -30,6 +48,11 @@ namespace DeckOfManyEncounters
                 {
                     i++;
                     encounter.AddMonster(list[j]);
+                }
+                if(j == list.Count)
+                {
+                    j = 0;
+                    Shuffle(list);
                 }
             }
 
@@ -72,8 +95,42 @@ namespace DeckOfManyEncounters
                     encounter.AddMonster(list[j]);
                     targetCR = smallGuys - (num - 1);
                 }
+                if (j == list.Count)
+                {
+                    j = 0;
+                    Shuffle(list);
+                }
             }
             return encounter;
+        }
+
+        public static List<Encounter> impossible(List<Monster> list)
+        {
+            Encounter encounter = new Encounter();
+            List<Encounter> encounterList = new List<Encounter> { };
+            int j = 0;
+            
+            for(int i = 0; i < 1;)
+            {
+                if (list[j].Name == "Tarrasque")
+                {
+                    i++;
+                }
+                else if(j == list.Count)
+                {
+                    return encounterList;
+                }
+                else
+                {
+                    j++;
+                }
+            }
+            for(int i = 0; i < 6; i++)
+            {
+                encounter.AddMonster(list[j]);
+                encounterList.Add(encounter);
+            }
+            return encounterList;
         }
 
 

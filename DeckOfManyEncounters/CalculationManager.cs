@@ -40,13 +40,13 @@ namespace DeckOfManyEncounters
         }
 
         //call to data processinggggg to develope monster list 
-        public void GetEligibleMonsters(string realm)
+        public void GetEligibleMonsters(string realm, bool noFly, bool noSwim)
         {
             int level = 0;
             foreach (Player player in party) level += player.Level;
             level /= party.Count;
             //populate monster list with call to fileManager
-            fileManager.readData(realm, level, monsterList);
+            fileManager.readData(realm, level, monsterList, noFly, noSwim);
         }
 
         internal List<Encounter> GenerateEncounters( int difficulty, int creatureCount)
@@ -62,12 +62,25 @@ namespace DeckOfManyEncounters
 
             double challengeLevel = 0.25 * level * party.Count + difficulty;
 
-            encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
-            encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
-            encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
-            encounters.Add(Calculations.methodTwo(challengeLevel, creatureCount, monsterList));
-            encounters.Add(Calculations.methodTwo(challengeLevel, creatureCount, monsterList));
-            encounters.Add(Calculations.methodTwo(challengeLevel, creatureCount, monsterList));
+            ///need separate logic for when only one creature feature
+            if (creatureCount == 1)
+            {
+                for (int i = 0; i < 6; i++) encounters.Add(Calculations.singleMonster(challengeLevel, monsterList));
+            }
+
+            else if(difficulty == 20)
+            {
+                encounters = Calculations.impossible( monsterList);
+            }
+            else
+            {
+                encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
+                encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
+                encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
+                encounters.Add(Calculations.methodTwo(challengeLevel, creatureCount, monsterList));
+                encounters.Add(Calculations.methodTwo(challengeLevel, creatureCount, monsterList));
+                encounters.Add(Calculations.methodTwo(challengeLevel, creatureCount, monsterList));
+            }
 
             return encounters;
 
