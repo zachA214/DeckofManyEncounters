@@ -90,7 +90,6 @@
             this.realmSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.realmSelector.FormattingEnabled = true;
             this.realmSelector.Items.AddRange(new object[] {
-            "Material Plane/Other",
             "Feywild",
             "Elemental Plane",
             "Astral Plane",

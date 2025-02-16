@@ -32,8 +32,9 @@ namespace DeckOfManyEncounters
                     Label monsterName = new Label();
                     monsterName.Text = encounterList[j].MonsterList[i].Name;
                     monsterName.Size = new Size(250, 23);
-                    monsterName.Location = new Point(30, yPos); // Position of delete button
-                    //monsterName.Click += (sender, e) => DeleteEntry(panel, deleteButton, CM1);
+                    monsterName.Location = new Point(30, yPos); 
+                    //monsterName.MouseHover += (sender, e) => monsterName.Cursor = Cursors.Hand;
+                    monsterName.Click += (sender, e) => getMonsterStats(sender, e, encounterList[j].MonsterList[i]);
 
                     PictureBox monsterImage = new PictureBox();
                     switch (encounterList[j].MonsterList[i].Size)
@@ -97,6 +98,15 @@ namespace DeckOfManyEncounters
             }
 
 
+        }
+
+        internal void getMonsterStats(object sender, EventArgs e, Monster myMonster)
+        {
+            MonsterStatsForm MSF = new MonsterStatsForm(myMonster);
+            //inputF1.ShowDialog();
+            if (MSF.ShowDialog() == DialogResult.OK)
+            {
+            }
         }
     }
 }
