@@ -17,13 +17,12 @@ namespace DeckOfManyEncounters
         public static Encounter singleMonster(double CR, List<Monster> list)
         {
             Encounter encounter = new Encounter();
-            double ogCR = CR;
-            int issue = 0;
+            int intCR = (int)Math.Round(CR);
             Shuffle(list);
 
             for(int i = 0, j = 0; i < 1; j++)
             {
-                if(CR == list[j].ChallengeRating)
+                if(intCR == list[j].ChallengeRating)
                 {
                     i++;
                     encounter.AddMonster(list[j]);
