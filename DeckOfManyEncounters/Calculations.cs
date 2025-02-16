@@ -69,6 +69,10 @@ namespace DeckOfManyEncounters
                 {
                     j = 0;
                     Shuffle(list);
+                    if(monsterCR > 1)
+                    {
+                        monsterCR--;
+                    }
                 }
             }
 
@@ -95,7 +99,7 @@ namespace DeckOfManyEncounters
             //loop to get the big guy
             for(int i = 0, j = 0; i<1; j++)
             {
-                if (list[j].ChallengeRating == CR)
+                if (list[j].ChallengeRating == (int)CR)
                 {
                     i++;
                     encounter.AddMonster(list[j]);
@@ -104,9 +108,13 @@ namespace DeckOfManyEncounters
                 {
                     j = 0;
                     Shuffle(list);
-                    CR--;
+                    if (CR > 1)
+                    {
+                        CR--;
+                    }
                 }
             }
+
 
             //little guys
             int targetCR = Math.Max(1, smallGuys - (num - 1));
@@ -117,10 +125,14 @@ namespace DeckOfManyEncounters
                 {
                     num--;
                     encounter.AddMonster(list[j]);
-                    targetCR = Math.Max(1, smallGuys - (num - 1));
+                    targetCR = Math.Max(1, smallGuys - (Math.Max(0, num - 1)));
                 }
                 if (j == list.Count - 1)
                 {
+                    if(targetCR > 1)
+                    {
+                        targetCR--;
+                    }
                     j = 0;
                     Shuffle(list);
                 }
