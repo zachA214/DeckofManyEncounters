@@ -41,6 +41,24 @@ namespace DeckOfManyEncounters.Tests
             Assert.That(monsterList[2].ChallengeRating, Is.EqualTo(1.00));
         }
 
+        [Test]
+        public void TestGenEncounterOneMonster()
+        {
+            CalculationManager calculationManager = new CalculationManager();
+
+            calculationManager.AddPlayer("joe", "Ham", 4);
+            calculationManager.AddPlayer("joe", "Ham", 3);
+            calculationManager.AddPlayer("joe", "Ham", 4);
+
+
+            calculationManager.GetEligibleMonsters("Nine Hells", true, true, 2);
+
+            List<Encounter> encounterList = new List<Encounter> { };
+            encounterList = calculationManager.GenerateEncounters(2, 1);
+
+            Assert.That(encounterList.Count, Is.EqualTo(6));
+        }
+
 
     }
 }
