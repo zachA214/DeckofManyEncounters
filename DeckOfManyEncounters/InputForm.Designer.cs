@@ -29,21 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InputForm));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.saveAndCloseInput = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.difficultyBox = new System.Windows.Forms.ComboBox();
+            this.realmSelector = new System.Windows.Forms.ComboBox();
+            this.realmLabel = new System.Windows.Forms.Label();
+            this.creatureCountLabel = new System.Windows.Forms.Label();
+            this.CreatureCounter = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.difficultyLabel = new System.Windows.Forms.Label();
+            this.swimmerCheckBox = new System.Windows.Forms.CheckBox();
+            this.flyerCheckBox = new System.Windows.Forms.CheckBox();
+            this.swimmerLabel = new System.Windows.Forms.Label();
+            this.flyerLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.CreatureCounter)).BeginInit();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(225, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(270, 26);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "THIS IS A FORM";
             // 
             // contextMenuStrip1
             // 
@@ -53,77 +54,192 @@
             // 
             // saveAndCloseInput
             // 
-            this.saveAndCloseInput.Location = new System.Drawing.Point(260, 332);
+            this.saveAndCloseInput.Location = new System.Drawing.Point(145, 365);
             this.saveAndCloseInput.Name = "saveAndCloseInput";
-            this.saveAndCloseInput.Size = new System.Drawing.Size(213, 37);
+            this.saveAndCloseInput.Size = new System.Drawing.Size(131, 26);
             this.saveAndCloseInput.TabIndex = 2;
             this.saveAndCloseInput.Text = "Save and Close";
             this.saveAndCloseInput.UseVisualStyleBackColor = true;
             this.saveAndCloseInput.Click += new System.EventHandler(this.saveAndCloseInput_Click);
             // 
-            // comboBox1
+            // difficultyBox
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "thing1",
-            "thing2",
-            "thing3"});
-            this.comboBox1.Location = new System.Drawing.Point(617, 172);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 28);
-            this.comboBox1.TabIndex = 3;
+            this.difficultyBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.difficultyBox.FormattingEnabled = true;
+            this.difficultyBox.Items.AddRange(new object[] {
+            "Easy",
+            "Normal",
+            "Hard",
+            "Very Hard",
+            "IMPOSSIBLE"});
+            this.difficultyBox.Location = new System.Drawing.Point(145, 189);
+            this.difficultyBox.Name = "difficultyBox";
+            this.difficultyBox.Size = new System.Drawing.Size(121, 29);
+            this.difficultyBox.TabIndex = 3;
             // 
-            // comboBox2
+            // realmSelector
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "thing1",
-            "thing2",
-            "thing3"});
-            this.comboBox2.Location = new System.Drawing.Point(617, 227);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 28);
-            this.comboBox2.TabIndex = 4;
+            this.realmSelector.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.realmSelector.FormattingEnabled = true;
+            this.realmSelector.Items.AddRange(new object[] {
+            "Material Plane/Other",
+            "Feywild",
+            "Elemental Planes",
+            "Astral Plane",
+            "Nine Hells"});
+            this.realmSelector.Location = new System.Drawing.Point(16, 189);
+            this.realmSelector.Name = "realmSelector";
+            this.realmSelector.Size = new System.Drawing.Size(121, 29);
+            this.realmSelector.TabIndex = 5;
             // 
-            // comboBox3
+            // realmLabel
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "thing1",
-            "thing2",
-            "thing3"});
-            this.comboBox3.Location = new System.Drawing.Point(617, 277);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 28);
-            this.comboBox3.TabIndex = 5;
+            this.realmLabel.AutoSize = true;
+            this.realmLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.realmLabel.Location = new System.Drawing.Point(50, 151);
+            this.realmLabel.Name = "realmLabel";
+            this.realmLabel.Size = new System.Drawing.Size(54, 21);
+            this.realmLabel.TabIndex = 6;
+            this.realmLabel.Text = "Realm";
+            // 
+            // creatureCountLabel
+            // 
+            this.creatureCountLabel.AutoSize = true;
+            this.creatureCountLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.creatureCountLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.creatureCountLabel.Location = new System.Drawing.Point(78, 242);
+            this.creatureCountLabel.Name = "creatureCountLabel";
+            this.creatureCountLabel.Size = new System.Drawing.Size(116, 21);
+            this.creatureCountLabel.TabIndex = 7;
+            this.creatureCountLabel.Text = "Creature Count";
+            // 
+            // CreatureCounter
+            // 
+            this.CreatureCounter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CreatureCounter.Location = new System.Drawing.Point(68, 276);
+            this.CreatureCounter.Maximum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.CreatureCounter.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.CreatureCounter.Name = "CreatureCounter";
+            this.CreatureCounter.Size = new System.Drawing.Size(150, 28);
+            this.CreatureCounter.TabIndex = 8;
+            this.CreatureCounter.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CreatureCounter.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(44, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 21);
+            this.label1.TabIndex = 9;
+            // 
+            // difficultyLabel
+            // 
+            this.difficultyLabel.AutoSize = true;
+            this.difficultyLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.difficultyLabel.Location = new System.Drawing.Point(170, 151);
+            this.difficultyLabel.Name = "difficultyLabel";
+            this.difficultyLabel.Size = new System.Drawing.Size(72, 21);
+            this.difficultyLabel.TabIndex = 10;
+            this.difficultyLabel.Text = "Difficulty";
+            // 
+            // swimmerCheckBox
+            // 
+            this.swimmerCheckBox.AutoSize = true;
+            this.swimmerCheckBox.Location = new System.Drawing.Point(167, 79);
+            this.swimmerCheckBox.Name = "swimmerCheckBox";
+            this.swimmerCheckBox.Size = new System.Drawing.Size(109, 25);
+            this.swimmerCheckBox.TabIndex = 11;
+            this.swimmerCheckBox.Text = "checkBox1";
+            this.swimmerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // flyerCheckBox
+            // 
+            this.flyerCheckBox.AutoSize = true;
+            this.flyerCheckBox.Location = new System.Drawing.Point(167, 35);
+            this.flyerCheckBox.Name = "flyerCheckBox";
+            this.flyerCheckBox.Size = new System.Drawing.Size(109, 25);
+            this.flyerCheckBox.TabIndex = 12;
+            this.flyerCheckBox.Text = "checkBox2";
+            this.flyerCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // swimmerLabel
+            // 
+            this.swimmerLabel.AutoSize = true;
+            this.swimmerLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.swimmerLabel.Location = new System.Drawing.Point(17, 80);
+            this.swimmerLabel.Name = "swimmerLabel";
+            this.swimmerLabel.Size = new System.Drawing.Size(134, 21);
+            this.swimmerLabel.TabIndex = 13;
+            this.swimmerLabel.Text = "Ignore Swimming";
+            // 
+            // flyerLabel
+            // 
+            this.flyerLabel.AutoSize = true;
+            this.flyerLabel.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.flyerLabel.Location = new System.Drawing.Point(36, 39);
+            this.flyerLabel.Name = "flyerLabel";
+            this.flyerLabel.Size = new System.Drawing.Size(101, 21);
+            this.flyerLabel.TabIndex = 14;
+            this.flyerLabel.Text = "Ignore Flying";
             // 
             // InputForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(278, 394);
+            this.Controls.Add(this.flyerLabel);
+            this.Controls.Add(this.swimmerLabel);
+            this.Controls.Add(this.flyerCheckBox);
+            this.Controls.Add(this.swimmerCheckBox);
+            this.Controls.Add(this.difficultyLabel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.CreatureCounter);
+            this.Controls.Add(this.creatureCountLabel);
+            this.Controls.Add(this.realmLabel);
+            this.Controls.Add(this.realmSelector);
+            this.Controls.Add(this.difficultyBox);
             this.Controls.Add(this.saveAndCloseInput);
-            this.Controls.Add(this.textBox1);
+            this.Font = new System.Drawing.Font("Microsoft Tai Le", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "InputForm";
-            this.Text = "InputForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Encounter Details";
+            ((System.ComponentModel.ISupportInitialize)(this.CreatureCounter)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button saveAndCloseInput;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox difficultyBox;
+        private System.Windows.Forms.ComboBox realmSelector;
+        private System.Windows.Forms.Label realmLabel;
+        private System.Windows.Forms.Label creatureCountLabel;
+        private System.Windows.Forms.NumericUpDown CreatureCounter;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label difficultyLabel;
+        private System.Windows.Forms.CheckBox swimmerCheckBox;
+        private System.Windows.Forms.CheckBox flyerCheckBox;
+        private System.Windows.Forms.Label swimmerLabel;
+        private System.Windows.Forms.Label flyerLabel;
     }
 }
