@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DeckOfManyEncounters
 {
@@ -81,7 +82,8 @@ namespace DeckOfManyEncounters
             Shuffle(list);
             double ogCR = CR;
 
-            int smallGuys = (int)Math.Round(CR / 2);
+            int smallGuys = Math.Max(1, (int)Math.Round(CR / 2));
+            MessageBox.Show($"{CR}");
             int num = numEnemies - 1;//max - remaining
             //between 1 and max - remaining
             //loop to get the big guy
@@ -105,7 +107,7 @@ namespace DeckOfManyEncounters
             //cr to look for smallGuys - num - 1
             for (int i = 0, j = 0; i < num; j++)
             {
-                if (list[j].ChallengeRating == targetCR)
+                if ((int)Math.Round(list[j].ChallengeRating) == targetCR)
                 {
                     num--;
                     encounter.AddMonster(list[j]);
