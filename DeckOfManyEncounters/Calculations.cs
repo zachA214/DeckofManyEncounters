@@ -83,7 +83,7 @@ namespace DeckOfManyEncounters
             double ogCR = CR;
 
             int smallGuys = Math.Max(1, (int)Math.Round(CR / 2));
-            MessageBox.Show($"{CR}");
+           // MessageBox.Show($"{CR}");
             int num = numEnemies - 1;//max - remaining
             //between 1 and max - remaining
             //loop to get the big guy

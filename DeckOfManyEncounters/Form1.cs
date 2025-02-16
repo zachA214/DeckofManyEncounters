@@ -38,17 +38,11 @@ namespace DeckOfManyEncounters
                 try 
                 {
                     CM1.GetEligibleMonsters(Realm, flyer, swimmer, DifficultyValue, Alignment);
-                    MessageBox.Show("yay");
                     this.encounterList = CM1.GenerateEncounters(DifficultyValue, CreatureCount);
                 }
                 catch(Exception ex)
                 {
                     MessageBox.Show("Error\n" + ex);
-                }
-
-                foreach(Encounter eaghbui in encounterList)
-                {
-                    MessageBox.Show(eaghbui.MonsterList[0].Name);
                 }
             }
             else if(CreatureCount != 0)
