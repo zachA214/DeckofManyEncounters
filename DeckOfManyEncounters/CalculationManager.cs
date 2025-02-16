@@ -13,10 +13,20 @@ namespace DeckOfManyEncounters
         private FileManager fileManager = new FileManager();
        // private List<Encounter> encounters = new List<Encounter> { }; 
 
-        private List<Monster> monsterList = new List<Monster> { };
+        internal List<Monster> monsterList = new List<Monster> { };
         //calculation functions
 
-        private List<Player> party = new List<Player> { };
+        internal List<Player> party = new List<Player> { };
+
+        public int getPartyCount()
+        {
+            return party.Count;
+        }
+
+        public int getMonsterListCount()
+        {
+            return monsterList.Count;
+        }
 
         public void AddPlayer(string name, string classification, int level)
         {
