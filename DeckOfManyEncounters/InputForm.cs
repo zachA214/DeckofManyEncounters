@@ -12,9 +12,11 @@ namespace DeckOfManyEncounters
 {
     public partial class InputForm: Form
     {
-        public string UserInput1 { get; set; }
-        public string UserInput2 { get; set; }
-        public string UserInput3 { get; set; }
+        public decimal DifficultyValue { get; set; }
+        public decimal CreatureCount { get; set; }
+        public string Realm { get; set; }
+        public bool flyer { get; set; }
+        public bool swimmer { get; set; }
         public InputForm()
         {
             InitializeComponent();
@@ -23,9 +25,16 @@ namespace DeckOfManyEncounters
         private void saveAndCloseInput_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            UserInput1 = comboBox1.Text;
-            UserInput2 = comboBox2.Text;
-            UserInput3 = comboBox3.Text;
+            // converting difficulty from string to int
+            if (difficultyBox.Text == "Easy") { DifficultyValue = -1; }
+            else if (difficultyBox.Text == "Normal") { DifficultyValue = 0; }
+            else if (difficultyBox.Text == "Hard") { DifficultyValue = 1; }
+            else if (difficultyBox.Text == "Very Hard") { DifficultyValue = 2; }
+            else if (difficultyBox.Text == "IMPOSSIBLE") { DifficultyValue = 12; }
+            CreatureCount = CreatureCounter.Value;
+            Realm = realmSelector.Text;
+            flyer = flyerCheckBox.Checked;
+            swimmer = swimmerCheckBox.Checked;
             this.Close();
         }
     }

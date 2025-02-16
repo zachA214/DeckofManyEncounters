@@ -12,6 +12,9 @@ namespace DeckOfManyEncounters
 {
     public partial class DeckOfManyEncounters : Form
     {
+        public string Realm , oh = "";
+        public decimal CreatureCount = 0, DifficultyValue = 0;
+        public bool flyer = true, swimmer = true;
         public DeckOfManyEncounters()
         {
             InitializeComponent();
@@ -23,11 +26,13 @@ namespace DeckOfManyEncounters
             //inputF1.ShowDialog();
             if (inputF1.ShowDialog() == DialogResult.OK)
             {
-                string userInput1 = inputF1.UserInput1;
-                string userInput2 = inputF1.UserInput2;
-                string userInput3 = inputF1.UserInput3;
+                this.DifficultyValue = inputF1.DifficultyValue;
+                this.CreatureCount = inputF1.CreatureCount;
+                this.Realm = inputF1.Realm;
+                this.flyer = inputF1.flyer;
+                this.swimmer = inputF1.swimmer;
 
-                MessageBox.Show($"User Input 1: {userInput1}\nUser Input 2: {userInput2}\nUser Input 3: {userInput3}");
+                MessageBox.Show($"Difficulty: {DifficultyValue}\nCreature Count: {this.CreatureCount}\nRealm: {this.Realm}\nFlyers?: {this.flyer}\nSwimmers?: {this.swimmer}");
             }
         }
     }
