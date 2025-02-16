@@ -147,7 +147,7 @@ namespace DeckOfManyEncounters
             Monster temp = new Monster
             {
                 Name = "Tarrasque",
-                Size = "Gargantuan",
+                Size = "gargantuan",
                 Type = "Monstrosity",
                 Alignment = "U",
                 AC = 25,

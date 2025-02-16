@@ -59,41 +59,38 @@
             this.encounterTabs.Controls.Add(this.Encounter4);
             this.encounterTabs.Controls.Add(this.Encounter5);
             this.encounterTabs.Controls.Add(this.Encounter6);
-            this.encounterTabs.Location = new System.Drawing.Point(37, 15);
-            this.encounterTabs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.encounterTabs.Location = new System.Drawing.Point(28, 12);
             this.encounterTabs.Name = "encounterTabs";
             this.encounterTabs.SelectedIndex = 0;
-            this.encounterTabs.Size = new System.Drawing.Size(985, 519);
+            this.encounterTabs.Size = new System.Drawing.Size(739, 415);
             this.encounterTabs.TabIndex = 0;
             // 
             // Encounter1
             // 
             this.Encounter1.Controls.Add(this.panel1);
-            this.Encounter1.Location = new System.Drawing.Point(8, 39);
-            this.Encounter1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Encounter1.Location = new System.Drawing.Point(4, 29);
             this.Encounter1.Name = "Encounter1";
-            this.Encounter1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Encounter1.Size = new System.Drawing.Size(969, 472);
+            this.Encounter1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Encounter1.Size = new System.Drawing.Size(731, 382);
             this.Encounter1.TabIndex = 0;
             this.Encounter1.Text = "Encounter 1";
             this.Encounter1.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
+            this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(967, 474);
+            this.panel1.Size = new System.Drawing.Size(725, 379);
             this.panel1.TabIndex = 0;
             // 
             // Encounter2
             // 
             this.Encounter2.Controls.Add(this.panel2);
-            this.Encounter2.Location = new System.Drawing.Point(8, 39);
-            this.Encounter2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Encounter2.Location = new System.Drawing.Point(4, 29);
             this.Encounter2.Name = "Encounter2";
-            this.Encounter2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Encounter2.Size = new System.Drawing.Size(969, 472);
+            this.Encounter2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.Encounter2.Size = new System.Drawing.Size(731, 382);
             this.Encounter2.TabIndex = 1;
             this.Encounter2.Text = "Encounter 2";
             this.Encounter2.UseVisualStyleBackColor = true;
@@ -101,19 +98,17 @@
             // panel2
             // 
             this.panel2.AutoScroll = true;
-            this.panel2.Location = new System.Drawing.Point(4, 4);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(967, 474);
+            this.panel2.Size = new System.Drawing.Size(725, 379);
             this.panel2.TabIndex = 1;
             // 
             // Encounter3
             // 
             this.Encounter3.Controls.Add(this.panel3);
-            this.Encounter3.Location = new System.Drawing.Point(8, 39);
-            this.Encounter3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Encounter3.Location = new System.Drawing.Point(4, 29);
             this.Encounter3.Name = "Encounter3";
-            this.Encounter3.Size = new System.Drawing.Size(969, 472);
+            this.Encounter3.Size = new System.Drawing.Size(731, 382);
             this.Encounter3.TabIndex = 2;
             this.Encounter3.Text = "Encounter 3";
             this.Encounter3.UseVisualStyleBackColor = true;
@@ -121,19 +116,17 @@
             // panel3
             // 
             this.panel3.AutoScroll = true;
-            this.panel3.Location = new System.Drawing.Point(4, 2);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(967, 474);
+            this.panel3.Size = new System.Drawing.Size(725, 379);
             this.panel3.TabIndex = 2;
             // 
             // Encounter4
             // 
             this.Encounter4.Controls.Add(this.panel4);
-            this.Encounter4.Location = new System.Drawing.Point(8, 39);
-            this.Encounter4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Encounter4.Location = new System.Drawing.Point(4, 29);
             this.Encounter4.Name = "Encounter4";
-            this.Encounter4.Size = new System.Drawing.Size(969, 472);
+            this.Encounter4.Size = new System.Drawing.Size(731, 382);
             this.Encounter4.TabIndex = 3;
             this.Encounter4.Text = "Encounter 4";
             this.Encounter4.UseVisualStyleBackColor = true;
@@ -141,19 +134,17 @@
             // panel4
             // 
             this.panel4.AutoScroll = true;
-            this.panel4.Location = new System.Drawing.Point(4, 2);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(967, 474);
+            this.panel4.Size = new System.Drawing.Size(725, 379);
             this.panel4.TabIndex = 2;
             // 
             // Encounter5
             // 
             this.Encounter5.Controls.Add(this.panel5);
-            this.Encounter5.Location = new System.Drawing.Point(8, 39);
-            this.Encounter5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Encounter5.Location = new System.Drawing.Point(4, 29);
             this.Encounter5.Name = "Encounter5";
-            this.Encounter5.Size = new System.Drawing.Size(969, 472);
+            this.Encounter5.Size = new System.Drawing.Size(731, 382);
             this.Encounter5.TabIndex = 4;
             this.Encounter5.Text = "Encounter 5";
             this.Encounter5.UseVisualStyleBackColor = true;
@@ -161,19 +152,17 @@
             // panel5
             // 
             this.panel5.AutoScroll = true;
-            this.panel5.Location = new System.Drawing.Point(4, 2);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(967, 474);
+            this.panel5.Size = new System.Drawing.Size(725, 379);
             this.panel5.TabIndex = 2;
             // 
             // Encounter6
             // 
             this.Encounter6.Controls.Add(this.panel6);
-            this.Encounter6.Location = new System.Drawing.Point(8, 39);
-            this.Encounter6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Encounter6.Location = new System.Drawing.Point(4, 29);
             this.Encounter6.Name = "Encounter6";
-            this.Encounter6.Size = new System.Drawing.Size(969, 472);
+            this.Encounter6.Size = new System.Drawing.Size(731, 382);
             this.Encounter6.TabIndex = 5;
             this.Encounter6.Text = "Encounter 6";
             this.Encounter6.UseVisualStyleBackColor = true;
@@ -181,21 +170,19 @@
             // panel6
             // 
             this.panel6.AutoScroll = true;
-            this.panel6.Location = new System.Drawing.Point(4, 2);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel6.Location = new System.Drawing.Point(3, 2);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(967, 474);
+            this.panel6.Size = new System.Drawing.Size(725, 379);
             this.panel6.TabIndex = 2;
             // 
             // EncountersDisplayForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.encounterTabs);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "EncountersDisplayForm";

@@ -35,27 +35,25 @@
             // monsterStat
             // 
             this.monsterStat.Location = new System.Drawing.Point(0, 0);
-            this.monsterStat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.monsterStat.Name = "monsterStat";
             this.monsterStat.ReadOnly = true;
-            this.monsterStat.Size = new System.Drawing.Size(1063, 555);
+            this.monsterStat.Size = new System.Drawing.Size(798, 445);
             this.monsterStat.TabIndex = 0;
             this.monsterStat.Text = "";
             // 
             // MonsterStatsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(1067, 562);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.monsterStat);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MonsterStatsForm";
-            this.Text = "MonsterStatsForm";
+            this.Text = "Monster Stats";
             this.ResumeLayout(false);
 
         }
