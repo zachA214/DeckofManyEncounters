@@ -415,8 +415,7 @@ Lizardfolk Shaman,Medium,Humanoid,N,13,27,30;swim 30,15,10,13,10,15,8,None,Perce
 Lycanthrope;Werebear,Medium,Humanoid,NG,11,135,40;climb 30,19,10,17,11,12,12,None,Perception,Nonmagicalimmu;nonsilveredimmu,Normal,Common,5,Shapechanger;Keen Smell,Monster Manual,NA,Wizards of the Coast,Other,0,0
 Lycanthrope;Wereboar,Medium,Humanoid,NE,11,78,40,17,10,15,10,11,8,None,Perception,Nonmagicalimmu;nonsilveredimmu,Normal,Common,4,Shapechanger;Charge;Relentless,Monster Manual,NA,Wizards of the Coast,Other,0,0
 Lycanthrope;Wererat,Medium,Humanoid,LE,12,33,30,10,15,12,11,10,8,None,Perception;Stealth,Nonmagicalimmu;nonsilveredimmu,Darkvision 60,Common,2,Shapechanger;Keen Smell,Monster Manual,NA,Wizards of the Coast,Other,0,0
-Lycanthrope;Wereraven,Medium,"Humanoid (Human)
-Humanoid (Shapechanger)",LG,12,31,30,10,15,11,13,15,14,None,Insight;Perception,Nonmagicalimmu;nonsilveredimmu,Normal,Common,2,Shapechanger;Mimicry,Curse of Strahd,NA,Wizards of the Coast,Other,0,0
+Lycanthrope;Wereraven,Medium,Humanoid (Human);Humanoid (Shapechanger),LG,12,31,30,10,15,11,13,15,14,None,Insight;Perception,Nonmagicalimmu;nonsilveredimmu,Normal,Common,2,Shapechanger;Mimicry,Curse of Strahd,NA,Wizards of the Coast,Other,0,0
 Lycanthrope;Weretiger,Medium,Humanoid,N,12,120,40,17,15,16,10,13,11,None,Perception;Stealth,Nonmagicalimmu;nonsilveredimmu,Darkvision 60,Common,4,Shapechanger;Keen Hearing;Keen Smell;Pounce,Monster Manual,NA,Wizards of the Coast,Other,0,0
 Lycanthrope;Werewolf,Medium,Humanoid,CE,12,58,40,15,13,14,10,11,10,None,Perception;Stealth,Nonmagicalimmu;nonsilveredimmu,Normal,Common,3,Shapechanger;Keen Hearing;Keen Smell,Monster Manual,NA,Wizards of the Coast,Other,0,0
 Magmin,Small,Elemental,CN,14,9,30,7,15,12,8,11,10,None,None,Nonmagicalres;fireimmu,Darkvision 60,Ignan,0.5,Death Burst;Ignited Illumination,Monster Manual,NA,Wizards of the Coast,Elemental Plane,0,0
