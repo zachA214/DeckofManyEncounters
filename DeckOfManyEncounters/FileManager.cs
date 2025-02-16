@@ -20,6 +20,7 @@ namespace DeckOfManyEncounters
             if ((location == fields[23] && CR <= Convert.ToDouble(fields[18])) || 
                 (location == "any" && CR <= Convert.ToDouble(fields[18])))
             {
+                //Empty conditionals so that we skip past flying or swimming enemies if user wants to omit them
                 if (fly == true && Convert.ToBoolean(fields[24]) == true);
                 else if (swim == true && Convert.ToBoolean(fields[25]) == true);
                 else
