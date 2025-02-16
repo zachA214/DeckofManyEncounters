@@ -1,10 +1,10 @@
 # DeckofManyEncounters
 GitHub repo for CrimsonCode 2025 for team I Cast 400 Bugs <br><br>
 ## Developers: 
-- [Christian Estlund](https://www.youtube.com/watch?v=dQw4w9WgXcQ)<br>
-- [Willow Zuvich](https://www.youtube.com/watch?v=dQw4w9WgXcQ)<br>
-- [Zachary Adelson](https://www.youtube.com/watch?v=dQw4w9WgXcQ)<br>
-- [Sarah Carley](https://www.youtube.com/watch?v=dQw4w9WgXcQ)<br>
+- [Christian Estlund](https://github.com/christianestlund)<br>
+- Willow Zuvich [[1]](https://github.com/WillowZuvich) [[2]](https://github.com/IcyMarty)<br>
+- [Zachary Adelson](https://github.com/zachA214)<br>
+- [Sarah Carley](https://github.com/Stellarone60)<br>
 
 ## Information Log:
 
