@@ -88,6 +88,10 @@ namespace DeckOfManyEncounters
                     i++;
                     encounter.AddMonster(list[j]);
                 }
+                if (j == (list.Count - 1))
+                {
+                    i++;
+                }
             }
 
             //little guys
