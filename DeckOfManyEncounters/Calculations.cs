@@ -134,7 +134,7 @@ namespace DeckOfManyEncounters
                 {
                     i++;
                 }
-                else if(j == list.Count)
+                else if(j == list.Count - 1)
                 {
                     return encounterList;
                 }
