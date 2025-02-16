@@ -46,11 +46,11 @@ namespace DeckOfManyEncounters
                     temp.WRI = fields[15];
                     temp.Senses = fields[16];
                     temp.Languages = fields[17];
-                    temp.ChallengeRating = Convert.ToInt32(fields[18]);
+                    temp.ChallengeRating = Convert.ToDouble(fields[18]);
                     temp.Additional = fields[19];
                     temp.Realm = fields[23];
-                    temp.HasFly = Convert.ToBoolean(fields[24]);
-                    temp.HasSwim = Convert.ToBoolean(fields[25]);
+                    temp.HasFly = Convert.ToBoolean(Convert.ToInt32(fields[24]));
+                    temp.HasSwim = Convert.ToBoolean(Convert.ToInt32(fields[25]));
                     list.Add(temp);
                 }
                 

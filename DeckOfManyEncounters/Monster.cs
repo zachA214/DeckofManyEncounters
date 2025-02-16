@@ -83,7 +83,7 @@ namespace DeckOfManyEncounters
 
         private double challengeRating = 0.0;
 
-        public double ChallengeRating { get { return ChallengeRating; } set { ChallengeRating = value; } }  
+        public double ChallengeRating { get { return challengeRating; } set { challengeRating = value; } }  
 
         private string additional = string.Empty; 
 
@@ -95,7 +95,7 @@ namespace DeckOfManyEncounters
 
         private bool hasSwim = false;
 
-        public bool HasSwim { get { return hasSwim; } set { HasSwim = value; } }
+        public bool HasSwim { get { return hasSwim; } set { hasSwim = value; } }
 
         private string realm = string.Empty;
 
