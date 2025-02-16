@@ -51,29 +51,8 @@ namespace DeckOfManyEncounters
             {
                 CM1.AddPlayer(PMIF.characterName, PMIF.characterClass, PMIF.characterLevel);
                 // Create controls
-                Button deleteButton = new Button();
-                deleteButton.Text = "Delete";
-                deleteButton.Size = new Size(75, 23);
-                deleteButton.Location = new Point(10, yPosition); // Position of delete button
-                deleteButton.Click += (sender, e) => DeleteEntry(panel, deleteButton);
 
-                Label nameLabel = new Label();
-                nameLabel.Text = "Name: " + CM1.party[CM1.getPartyCount() - 1].Name;
-                nameLabel.Location = new Point(100, yPosition); // Position of Name label
-
-                Label classLabel = new Label();
-                classLabel.Text = "Class: " + CM1.party[CM1.getPartyCount() - 1].Classification;
-                classLabel.Location = new Point(250, yPosition); // Position of Title label
-
-                Label levelLabel = new Label();
-                levelLabel.Text = "Level: " + CM1.party[CM1.getPartyCount() - 1].Level;
-                levelLabel.Location = new Point(400, yPosition); // Position of Age label
-
-                // Add controls to the panel
-                panel.Controls.Add(deleteButton);
-                panel.Controls.Add(nameLabel);
-                panel.Controls.Add(classLabel);
-                panel.Controls.Add(levelLabel);
+                addElement(panel, CM1, CM1.getPartyCount() - 1);
 
                 // Update the Y-position for the next entry
                 yPosition += 40; // Adjust this value for spacing between entries
@@ -83,18 +62,79 @@ namespace DeckOfManyEncounters
                 MessageBox.Show("Character addition failed\n");
             }
         }
-        private void DeleteEntry(Panel panel, Button deleteButton)
+
+        private void addElement(Panel panel, CalculationManager CM1, int index)
+        {
+            Button deleteButton = new Button();
+            deleteButton.Text = "Delete";
+            deleteButton.Size = new Size(75, 23);
+            deleteButton.Location = new Point(10, yPosition); // Position of delete button
+            deleteButton.Click += (sender, e) => DeleteEntry(panel, deleteButton, CM1);
+
+            Label nameLabel = new Label();
+            nameLabel.Width = 150;
+            nameLabel.Text = "Name: " + CM1.party[index].Name;
+            nameLabel.Location = new Point(100, yPosition); // Position of Name label
+
+            Label classLabel = new Label();
+            classLabel.Text = "Class: " + CM1.party[index].Classification;
+            classLabel.Location = new Point(250, yPosition); // Position of Title label
+
+            Label levelLabel = new Label();
+            levelLabel.Text = "Level: " + CM1.party[index].Level;
+            levelLabel.Location = new Point(400, yPosition); // Position of Age label
+
+            // Add controls to the panel
+            panel.Controls.Add(deleteButton);
+            panel.Controls.Add(nameLabel);
+            panel.Controls.Add(classLabel);
+            panel.Controls.Add(levelLabel);
+        }
+        private void DeleteEntry(Panel panel, Button deleteButton, CalculationManager CM1)
         {
             // Find the controls to delete (delete button and associated labels)
             List<Control> controlsToRemove = new List<Control>();
+            Player lookupPlayer = new Player("","",0);
 
             foreach (Control control in panel.Controls)
             {
                 if (control.Top == deleteButton.Top)
                 {
+                    if (control.Text.StartsWith("Name:"))
+                    {
+                        lookupPlayer.Name = control.Text.Substring(6);
+                    }
+                    else if (control.Text.StartsWith("Class:"))
+                    {
+                        lookupPlayer.Classification = control.Text.Substring(7);
+                    }
+                    else if (control.Text.StartsWith("Level:"))
+                    {
+                        lookupPlayer.Level = Convert.ToInt32(control.Text.Substring(7));
+                        try
+                        {
+                            int x = 0; 
+                            foreach (Player lookup in CM1.party)
+                            {
+                                if (lookup.Name == lookupPlayer.Name && lookup.Classification == lookupPlayer.Classification && lookup.Level == lookupPlayer.Level)
+                                {
+                                    CM1.RemovePlayer(x);
+                                    break;
+                                }
+                                x++;
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            MessageBox.Show("Error: Failed to find player\n" + e);
+                        }
+
+                    }
+                    // MessageBox.Show(control.Text);
                     controlsToRemove.Add(control);
                 }
             }
+            
 
             // Remove the controls associated with this entry
             foreach (Control control in controlsToRemove)

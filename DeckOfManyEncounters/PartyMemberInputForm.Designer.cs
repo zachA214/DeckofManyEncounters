@@ -152,6 +152,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PartyMemberInputForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "PartyMemberInputForm";
             ((System.ComponentModel.ISupportInitialize)(this.levelBox)).EndInit();
             this.ResumeLayout(false);
