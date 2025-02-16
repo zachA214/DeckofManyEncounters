@@ -9,7 +9,7 @@ namespace DeckOfManyEncounters
     
     public class CalculationManager
     {
-        private List<string> encounters = new List<string> { }; 
+       // private List<Encounter> encounters = new List<Encounter> { }; 
 
         private List<Monster> monsterList = new List<Monster> { };
         //calculation functions
@@ -23,12 +23,11 @@ namespace DeckOfManyEncounters
 
         //call to data processinggggg to develope monster list 
 
-        public List<string> GenerateEncounters(int challengeLevel, int difficulty, 
-            bool yesSwimming, bool yesFlying, int creatureCount, string realm)
+        internal List<Encounter> GenerateEncounters(int challengeLevel, int difficulty, int creatureCount)
         {
             //encounters.Add()
             //call to calculations and append to list 
-            return encounters;
+            return new List<Encounter> { };
         }
 
         
