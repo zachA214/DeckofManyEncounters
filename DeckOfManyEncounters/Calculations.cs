@@ -34,7 +34,7 @@ namespace DeckOfManyEncounters
                     Shuffle(list);
                     CR--;
                 }
-                else
+                else if(issue == 1 && j == list.Count() - 1)
                 {
                     j = 0;
                     Shuffle(list);
