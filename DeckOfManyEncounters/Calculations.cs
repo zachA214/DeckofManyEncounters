@@ -18,11 +18,13 @@ namespace DeckOfManyEncounters
         {
             Encounter encounter = new Encounter();
             int intCR = (int)Math.Round(CR);
+            int adder = 0;
             Shuffle(list);
 
             for(int i = 0, j = 0; i < 1; j++)
             {
-                if(intCR == Convert.ToInt32(list[j].ChallengeRating))
+                if((intCR + adder) == Convert.ToInt32(list[j].ChallengeRating) ||
+                    (intCR - adder) == Convert.ToInt32(list[j].ChallengeRating))
                 {
                     Console.WriteLine("Into the if statement\n");
                     i++;
@@ -30,7 +32,9 @@ namespace DeckOfManyEncounters
                 }
                 if(j == (list.Count - 1))
                 {
-                    i++;
+                    adder++;
+                    Shuffle(list);
+                    j = 0;
                 }
             }
             return encounter;
