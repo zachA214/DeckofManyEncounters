@@ -99,27 +99,27 @@ namespace DeckOfManyEncounters
             }
             if (characterClass == "Paladin")
             {
-                return 7;
+                return 6;
             }
             if (characterClass == "Ranger")
             {
-                return 8;
+                return 7;
             }
             if (characterClass == "Rogue")
             {
-                return 9;
+                return 8;
             }
             if (characterClass == "Sorcerer")
             {
-                return 10;
+                return 9;
             }
             if (characterClass == "Warlock")
             {
-                return 11;
+                return 10;
             }
             if (characterClass == "Wizard")
             {
-                return 12;
+                return 11;
             }
             return -1;
         }
