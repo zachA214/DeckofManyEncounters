@@ -89,7 +89,7 @@ namespace DeckOfManyEncounters
             {
                 return 3;
             }
-            if (characterClass == "Fightr")
+            if (characterClass == "Fighter")
             {
                 return 4;
             }
