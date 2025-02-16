@@ -92,7 +92,8 @@
             "Feywild",
             "Elemental Planes",
             "Astral Plane",
-            "Nine Hells"});
+            "Nine Hells",
+            "Any"});
             this.realmSelector.Location = new System.Drawing.Point(16, 189);
             this.realmSelector.Name = "realmSelector";
             this.realmSelector.Size = new System.Drawing.Size(121, 29);

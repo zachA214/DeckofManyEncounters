@@ -12,8 +12,8 @@ namespace DeckOfManyEncounters
 {
     public partial class InputForm: Form
     {
-        public decimal DifficultyValue { get; set; }
-        public decimal CreatureCount { get; set; }
+        public int DifficultyValue { get; set; }
+        public int CreatureCount { get; set; }
         public string Realm { get; set; }
         public bool flyer { get; set; }
         public bool swimmer { get; set; }
@@ -34,7 +34,7 @@ namespace DeckOfManyEncounters
             else if (difficultyBox.Text == "Very Hard") { DifficultyValue = 2; }
             else if (difficultyBox.Text == "IMPOSSIBLE") { DifficultyValue = 12; }
             else if (difficultyBox.Text == "WORLD ENDER") { DifficultyValue = 20; }
-                CreatureCount = CreatureCounter.Value;
+            CreatureCount = Convert.ToInt32(CreatureCounter.Value);
             Realm = realmSelector.Text;
             flyer = flyerCheckBox.Checked;
             swimmer = swimmerCheckBox.Checked;

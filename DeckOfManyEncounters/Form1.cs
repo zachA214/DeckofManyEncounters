@@ -13,13 +13,13 @@ namespace DeckOfManyEncounters
     public partial class DeckOfManyEncounters : Form
     {
         public string Realm , oh = "";
-        public decimal CreatureCount = 0, DifficultyValue = 0;
+        public int CreatureCount = 0, DifficultyValue = 0;
         public bool flyer = true, swimmer = true;
         public CalculationManager CM1;
 
         private void partyButton_Click(object sender, EventArgs e)
         {
-            PartyViewerForm partyF1 = new PartyViewerForm();
+            PartyViewerForm partyF1 = new PartyViewerForm(CM1);
             if(partyF1.ShowDialog() == DialogResult.OK)
             {
                 MessageBox.Show("Party Saved\n");

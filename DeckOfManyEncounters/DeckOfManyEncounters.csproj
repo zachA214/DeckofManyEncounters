@@ -63,6 +63,12 @@
       <DependentUpon>InputForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Monster.cs" />
+    <Compile Include="PartyMemberInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartyMemberInputForm.Designer.cs">
+      <DependentUpon>PartyMemberInputForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PartyViewerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InputForm.resx">
       <DependentUpon>InputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartyMemberInputForm.resx">
+      <DependentUpon>PartyMemberInputForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PartyViewerForm.resx">
       <DependentUpon>PartyViewerForm.cs</DependentUpon>
