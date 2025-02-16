@@ -33,9 +33,22 @@ namespace DeckOfManyEncounters
             // Create encounters or display warning box if party not filled and encounters not entered
             if (CreatureCount != 0 && CM1.party.Count() > 0)
             {
-                MessageBox.Show("Working");
-                CM1.GetEligibleMonsters(Realm, flyer, swimmer, DifficultyValue);
-                encounterList = CM1.GenerateEncounters(DifficultyValue, CreatureCount);
+
+
+                try 
+                {
+                    CM1.GetEligibleMonsters(Realm, flyer, swimmer, DifficultyValue, Alignment);
+                    this.encounterList = CM1.GenerateEncounters(DifficultyValue, CreatureCount);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Error\n" + ex);
+                }
+
+                foreach(Encounter eaghbui in encounterList)
+                {
+                    MessageBox.Show(eaghbui.MonsterList[0].Name);
+                }
             }
             else if(CreatureCount != 0)
             {
