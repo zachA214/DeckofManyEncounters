@@ -109,7 +109,7 @@ namespace DeckOfManyEncounters
             }
 
             //little guys
-            double targetCR = smallGuys - (num - 1);
+            int targetCR = Math.Max(1, smallGuys - (num - 1));
             //cr to look for smallGuys - num - 1
             for (int i = 0, j = 0; i < num; j++)
             {
@@ -117,7 +117,7 @@ namespace DeckOfManyEncounters
                 {
                     num--;
                     encounter.AddMonster(list[j]);
-                    targetCR = smallGuys - (num - 1);
+                    targetCR = Math.Max(1, smallGuys - (num - 1));
                 }
                 if (j == list.Count - 1)
                 {
