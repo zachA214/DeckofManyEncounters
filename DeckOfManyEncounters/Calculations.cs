@@ -26,7 +26,6 @@ namespace DeckOfManyEncounters
                 if((intCR + adder) == Convert.ToInt32(list[j].ChallengeRating) ||
                     (intCR - adder) == Convert.ToInt32(list[j].ChallengeRating))
                 {
-                    Console.WriteLine("Into the if statement\n");
                     i++;
                     encounter.AddMonster(list[j]);
                 }
