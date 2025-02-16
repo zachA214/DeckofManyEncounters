@@ -11,5 +11,14 @@ namespace DeckOfManyEncounters
     {
         private List<Monster> monsterList = new List<Monster> { };
         //calculation functions
+
+        private List<Player> party = new List<Player> { };
+
+        public void AddPlayer(string name, string classification, int level)
+        {
+            party.Add(new Player(name, classification, level));
+        }
+
+        
     }
 }
