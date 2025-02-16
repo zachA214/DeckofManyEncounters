@@ -30,7 +30,7 @@ namespace DeckOfManyEncounters
                 for(int i = 0; i < encounterList[j].MonsterList.Count(); i++)
                 {
                     Label monsterName = new Label();
-                    monsterName.Text = encounterList[0].MonsterList[i].Name;
+                    monsterName.Text = encounterList[j].MonsterList[i].Name;
                     monsterName.Size = new Size(250, 23);
                     monsterName.Location = new Point(30, yPos); // Position of delete button
                     //monsterName.Click += (sender, e) => DeleteEntry(panel, deleteButton, CM1);
