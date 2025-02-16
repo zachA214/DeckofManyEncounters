@@ -28,24 +28,10 @@ namespace DeckOfManyEncounters
                     i++;
                     encounter.AddMonster(list[j]);
                 }
-                if(j == list.Count() - 1 && issue != 1)
+                if(j == list.Count() - 1)
                 {
-                    j = 0;
-                    Shuffle(list);
-                    CR--;
+                    i++;
                 }
-                else if(issue == 1 && j == list.Count() - 1)
-                {
-                    j = 0;
-                    Shuffle(list);
-                    CR++;
-                }
-                if (CR == 0 && j == list.Count() - 1)
-                {
-                    issue = 1;
-                    CR = ogCR + 1;
-                }
-                
             }
             return encounter;
         }
