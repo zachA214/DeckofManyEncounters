@@ -42,10 +42,11 @@
             // nameInput
             // 
             this.nameInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nameInput.Location = new System.Drawing.Point(168, 37);
+            this.nameInput.Location = new System.Drawing.Point(224, 46);
+            this.nameInput.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nameInput.MaxLength = 20;
             this.nameInput.Name = "nameInput";
-            this.nameInput.Size = new System.Drawing.Size(213, 26);
+            this.nameInput.Size = new System.Drawing.Size(283, 31);
             this.nameInput.TabIndex = 0;
             this.nameInput.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nameInput.TextChanged += new System.EventHandler(this.nameInput_TextChanged);
@@ -67,15 +68,17 @@
             "Sorcerer",
             "Warlock",
             "Wizard"});
-            this.classBox.Location = new System.Drawing.Point(197, 87);
+            this.classBox.Location = new System.Drawing.Point(263, 109);
+            this.classBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.classBox.Name = "classBox";
-            this.classBox.Size = new System.Drawing.Size(184, 28);
+            this.classBox.Size = new System.Drawing.Size(244, 33);
             this.classBox.TabIndex = 1;
             this.classBox.SelectedValueChanged += new System.EventHandler(this.classBox_SelectedValueChanged);
             // 
             // levelBox
             // 
-            this.levelBox.Location = new System.Drawing.Point(261, 136);
+            this.levelBox.Location = new System.Drawing.Point(348, 170);
+            this.levelBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.levelBox.Maximum = new decimal(new int[] {
             20,
             0,
@@ -87,7 +90,7 @@
             0,
             0});
             this.levelBox.Name = "levelBox";
-            this.levelBox.Size = new System.Drawing.Size(120, 26);
+            this.levelBox.Size = new System.Drawing.Size(160, 31);
             this.levelBox.TabIndex = 2;
             this.levelBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.levelBox.Value = new decimal(new int[] {
@@ -100,9 +103,10 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.nameLabel.Location = new System.Drawing.Point(25, 37);
+            this.nameLabel.Location = new System.Drawing.Point(33, 46);
+            this.nameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(125, 20);
+            this.nameLabel.Size = new System.Drawing.Size(168, 25);
             this.nameLabel.TabIndex = 3;
             this.nameLabel.Text = "Character Name";
             // 
@@ -110,9 +114,10 @@
             // 
             this.levelLabel.AutoSize = true;
             this.levelLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.levelLabel.Location = new System.Drawing.Point(104, 138);
+            this.levelLabel.Location = new System.Drawing.Point(139, 172);
+            this.levelLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.levelLabel.Name = "levelLabel";
-            this.levelLabel.Size = new System.Drawing.Size(46, 20);
+            this.levelLabel.Size = new System.Drawing.Size(64, 25);
             this.levelLabel.TabIndex = 4;
             this.levelLabel.Text = "Level";
             // 
@@ -120,18 +125,20 @@
             // 
             this.classLabel.AutoSize = true;
             this.classLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.classLabel.Location = new System.Drawing.Point(102, 87);
+            this.classLabel.Location = new System.Drawing.Point(136, 109);
+            this.classLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.classLabel.Name = "classLabel";
-            this.classLabel.Size = new System.Drawing.Size(48, 20);
+            this.classLabel.Size = new System.Drawing.Size(66, 25);
             this.classLabel.TabIndex = 5;
             this.classLabel.Text = "Class";
             // 
             // saveButton
             // 
             this.saveButton.Enabled = false;
-            this.saveButton.Location = new System.Drawing.Point(29, 193);
+            this.saveButton.Location = new System.Drawing.Point(39, 241);
+            this.saveButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(143, 32);
+            this.saveButton.Size = new System.Drawing.Size(191, 40);
             this.saveButton.TabIndex = 6;
             this.saveButton.Text = "Save and Close";
             this.saveButton.UseVisualStyleBackColor = true;
@@ -139,10 +146,10 @@
             // 
             // PartyMemberInputForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(405, 264);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(119)))), ((int)(((byte)(221)))));
+            this.ClientSize = new System.Drawing.Size(540, 330);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.classLabel);
             this.Controls.Add(this.levelLabel);
@@ -152,6 +159,7 @@
             this.Controls.Add(this.nameInput);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PartyMemberInputForm";

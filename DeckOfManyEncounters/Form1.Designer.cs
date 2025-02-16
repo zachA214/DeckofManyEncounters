@@ -36,9 +36,9 @@
             // 
             // inputFormOpenButton
             // 
-            this.inputFormOpenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.inputFormOpenButton.Location = new System.Drawing.Point(912, 355);
-            this.inputFormOpenButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.inputFormOpenButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.inputFormOpenButton.Location = new System.Drawing.Point(960, 543);
+            this.inputFormOpenButton.Margin = new System.Windows.Forms.Padding(4);
             this.inputFormOpenButton.Name = "inputFormOpenButton";
             this.inputFormOpenButton.Size = new System.Drawing.Size(210, 55);
             this.inputFormOpenButton.TabIndex = 0;
@@ -48,10 +48,10 @@
             // 
             // partyButton
             // 
-            this.partyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.partyButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.partyButton.ForeColor = System.Drawing.Color.Black;
-            this.partyButton.Location = new System.Drawing.Point(252, 355);
-            this.partyButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.partyButton.Location = new System.Drawing.Point(114, 543);
+            this.partyButton.Margin = new System.Windows.Forms.Padding(4);
             this.partyButton.Name = "partyButton";
             this.partyButton.Size = new System.Drawing.Size(210, 55);
             this.partyButton.TabIndex = 1;
@@ -61,9 +61,9 @@
             // 
             // encounterGenerationButton
             // 
-            this.encounterGenerationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.encounterGenerationButton.Location = new System.Drawing.Point(535, 578);
-            this.encounterGenerationButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.encounterGenerationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.encounterGenerationButton.Location = new System.Drawing.Point(500, 451);
+            this.encounterGenerationButton.Margin = new System.Windows.Forms.Padding(4);
             this.encounterGenerationButton.Name = "encounterGenerationButton";
             this.encounterGenerationButton.Size = new System.Drawing.Size(280, 82);
             this.encounterGenerationButton.TabIndex = 2;
@@ -83,7 +83,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1357, 942);
             this.MinimumSize = new System.Drawing.Size(1357, 942);
