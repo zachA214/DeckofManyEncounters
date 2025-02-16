@@ -62,6 +62,9 @@ namespace DeckOfManyEncounters
 
             double challengeLevel = 0.25 * level * party.Count + difficulty;
 
+            ///need separate logic for when only one creature feature
+            
+
             encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
             encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
             encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
