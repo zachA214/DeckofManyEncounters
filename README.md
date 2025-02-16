@@ -18,6 +18,8 @@ Parameters
 > Party level: Average party level <br>
 > Party size: Total party count <br>
 > Realm: Where the encounter will take place <br>
+> Swim: Togglable value <br>
+> Fly: Togglable value <br>
 
 Challenge rating Calculation
 0.25 * Average Party Level * Party Size + Difficulty = Recommended CR <br>
