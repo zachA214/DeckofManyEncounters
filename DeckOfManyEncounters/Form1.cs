@@ -205,7 +205,7 @@ namespace DeckOfManyEncounters
                 this.swimmer = inputF1.swimmer;
                 this.Alignment = inputF1.Alignment;
 
-                MessageBox.Show($"Difficulty: {DifficultyValue}\nCreature Count: {this.CreatureCount}\nRealm: {this.Realm}\nFlyers?: {this.flyer}\nSwimmers?: {this.swimmer}\nAlignment: {this.Alignment}");
+                //MessageBox.Show($"Difficulty: {DifficultyValue}\nCreature Count: {this.CreatureCount}\nRealm: {this.Realm}\nFlyers?: {this.flyer}\nSwimmers?: {this.swimmer}\nAlignment: {this.Alignment}");
             }
         }
     }
