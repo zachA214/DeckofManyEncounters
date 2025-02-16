@@ -32,10 +32,10 @@ namespace DeckOfManyEncounters
                     Label monsterName = new Label();
                     monsterName.Text = encounterList[j].MonsterList[i].Name;
                     monsterName.Size = new Size(250, 23);
-                    monsterName.Location = new Point(30, yPos); 
+                    monsterName.Location = new Point(30, yPos);
                     //monsterName.MouseHover += (sender, e) => monsterName.Cursor = Cursors.Hand;
-                    monsterName.Click += (sender, e) => getMonsterStats(sender, e, encounterList[j].MonsterList[i]);
-
+                    int jcur = j, icur = i;
+                    monsterName.Click += (sender, e) => getMonsterStats(sender, e, encounterList[jcur].MonsterList[icur]);
                     PictureBox monsterImage = new PictureBox();
                     switch (encounterList[j].MonsterList[i].Size)
                     {
