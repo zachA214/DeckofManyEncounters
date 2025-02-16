@@ -26,5 +26,39 @@ namespace DeckOfManyEncounters.Tests
             Assert.That(monsterList[0].ChallengeRating, Is.EqualTo(0.25));
 
         }
+
+        [Test]
+        public void TestReadDataNormal()
+        {
+            FileManager fileManager = new FileManager();
+            List<Monster> monsterList = new List<Monster> { };
+
+            fileManager.readData("Any", 6, monsterList, false, false);
+
+            Assert.That(monsterList[0].Name, Is.EqualTo("Aarakocra"));
+            Assert.That(monsterList[1].AC, Is.EqualTo(13));
+            Assert.That(monsterList[2].HP, Is.EqualTo(49));
+            Assert.That(monsterList[2].ChallengeRating, Is.EqualTo(1.00));
+        }
+
+        [Test]
+        public void TestGenEncounterOneMonster()
+        {
+            CalculationManager calculationManager = new CalculationManager();
+
+            calculationManager.AddPlayer("joe", "Ham", 4);
+            calculationManager.AddPlayer("joe", "Ham", 3);
+            calculationManager.AddPlayer("joe", "Ham", 4);
+
+
+            calculationManager.GetEligibleMonsters("Nine Hells", true, true, 2);
+
+            List<Encounter> encounterList = new List<Encounter> { };
+            encounterList = calculationManager.GenerateEncounters(2, 1);
+
+            Assert.That(encounterList.Count, Is.EqualTo(6));
+        }
+
+
     }
 }

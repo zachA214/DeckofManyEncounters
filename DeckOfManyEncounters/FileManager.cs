@@ -21,8 +21,8 @@ namespace DeckOfManyEncounters
                 (location == "Any" && CR >= Convert.ToDouble(fields[18])))
             {
                 //Empty conditionals so that we skip past flying or swimming enemies if user wants to omit them
-                if (fly == true && Convert.ToBoolean(fields[24]) == true);
-                else if (swim == true && Convert.ToBoolean(fields[25]) == true);
+                if (fly == true && Convert.ToBoolean(Convert.ToInt32(fields[24])) == true);
+                else if (swim == true && Convert.ToBoolean(Convert.ToInt32(fields[25])) == true);
                 else
                 {
                     //allocate the memory and input the thing
@@ -46,11 +46,11 @@ namespace DeckOfManyEncounters
                     temp.WRI = fields[15];
                     temp.Senses = fields[16];
                     temp.Languages = fields[17];
-                    temp.ChallengeRating = Convert.ToInt32(fields[18]);
+                    temp.ChallengeRating = Convert.ToDouble(fields[18]);
                     temp.Additional = fields[19];
                     temp.Realm = fields[23];
-                    temp.HasFly = Convert.ToBoolean(fields[24]);
-                    temp.HasSwim = Convert.ToBoolean(fields[25]);
+                    temp.HasFly = Convert.ToBoolean(Convert.ToInt32(fields[24]));
+                    temp.HasSwim = Convert.ToBoolean(Convert.ToInt32(fields[25]));
                     list.Add(temp);
                 }
                 
@@ -76,5 +76,39 @@ namespace DeckOfManyEncounters
             sr.Close();
 
         }
+
+        //getAlignment takes in the al (alignment) and compares it with the desired alignment
+        //it returns 1 if the alignment matches, a 0 if it doesn't
+        public int getAlignment(string al, string desired)
+        {
+            int alignment = 0;
+            if (al.Contains("E") && desired == "Evil")
+            {
+                alignment = 1;
+            }
+            else if(al == "NOT GOOD" && (desired == "Neutral" || desired == "Evil"))
+            {
+                alignment = 1;
+            }
+            else if((al == "NOT LAWFUL" || al.Contains("ANY") || al == "U") && desired == "Any")
+            {
+                alignment = 1;
+            }
+            else if(al.Contains("G") && desired == "Good")
+            {
+                alignment = 1;
+            }
+            else if(al.Contains("N") && desired == "Neutral")
+            {
+                alignment = 1;
+            }
+            else if(desired == "Any")
+            {
+                alignment = 1;
+            }
+
+                return alignment;
+        }
     }
+
 }
