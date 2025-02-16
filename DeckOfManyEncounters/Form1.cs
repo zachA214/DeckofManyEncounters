@@ -37,12 +37,16 @@ namespace DeckOfManyEncounters
             // Create encounters or display warning box if party not filled and encounters not entered
             if (CreatureCount != 0 && CM1.party.Count() > 0)
             {
-
-
                 try 
                 {
                     CM1.GetEligibleMonsters(Realm, flyer, swimmer, DifficultyValue, Alignment);
                     this.encounterList = CM1.GenerateEncounters(DifficultyValue, CreatureCount);
+
+                    EncountersDisplayForm EDF = new EncountersDisplayForm(encounterList);
+                    if(EDF.ShowDialog() == DialogResult.OK)
+                    {
+
+                    }
                 }
                 catch(Exception ex)
                 {
