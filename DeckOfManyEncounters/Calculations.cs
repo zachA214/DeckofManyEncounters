@@ -24,10 +24,11 @@ namespace DeckOfManyEncounters
             {
                 if(intCR == list[j].ChallengeRating)
                 {
+                    Console.WriteLine("Into the if statement\n");
                     i++;
                     encounter.AddMonster(list[j]);
                 }
-                if(j == (list.Count() - 1))
+                if(j == (list.Count - 1))
                 {
                     i++;
                 }
