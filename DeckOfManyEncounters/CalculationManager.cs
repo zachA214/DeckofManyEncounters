@@ -68,6 +68,10 @@ namespace DeckOfManyEncounters
                 for (int i = 0; i < 6; i++) encounters.Add(Calculations.singleMonster(challengeLevel, monsterList));
             }
 
+            else if(difficulty == 20)
+            {
+                encounters = Calculations.impossible( monsterList);
+            }
             else
             {
                 encounters.Add(Calculations.methodOne(challengeLevel, creatureCount, monsterList));
