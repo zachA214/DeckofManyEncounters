@@ -62,7 +62,7 @@
             // encounterGenerationButton
             // 
             this.encounterGenerationButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.encounterGenerationButton.Location = new System.Drawing.Point(500, 451);
+            this.encounterGenerationButton.Location = new System.Drawing.Point(505, 450);
             this.encounterGenerationButton.Margin = new System.Windows.Forms.Padding(4);
             this.encounterGenerationButton.Name = "encounterGenerationButton";
             this.encounterGenerationButton.Size = new System.Drawing.Size(280, 82);
