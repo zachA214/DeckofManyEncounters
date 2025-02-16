@@ -17,9 +17,10 @@ namespace DeckOfManyEncounters
         That is the CR of the monsters we pull
         CR 12, 3 monsters. 3 CR 8 monsters
          */
-        public List<Monster> methodOne(double CR, int numEnemies, List<Monster> list)
+        //edge case for if CR is 1 so we can get enough lower CR combined for this???
+        public static Encounter methodOne(double CR, int numEnemies, List<Monster> list)
         {
-            List<Monster> encounter = new List<Monster> { };
+            Encounter encounter = new Encounter { };
             double monsterCR = (CR * 2) / numEnemies;
             monsterCR = Math.Round(monsterCR);
             Shuffle(list);
@@ -28,7 +29,7 @@ namespace DeckOfManyEncounters
                 if (list[j].ChallengeRating == monsterCR)
                 {
                     i++;
-                    encounter.Add(list[j]);
+                    encounter.AddMonster(list[j]);
                 }
             }
 
@@ -41,9 +42,9 @@ namespace DeckOfManyEncounters
         One that's equal to max
         One guy with CR 12, leftovers where total CR adds up to 12 (maybe half?)
          */
-        public List<Monster> methodTwo(double CR, int numEnemies, List<Monster> list)
+        public static Encounter methodTwo(double CR, int numEnemies, List<Monster> list)
         {
-            List<Monster> encounter = new List<Monster> { };
+            Encounter encounter = new Encounter { };
             Random rand = new Random();
             Shuffle(list);
 
@@ -56,7 +57,7 @@ namespace DeckOfManyEncounters
                 if (list[j].ChallengeRating == CR)
                 {
                     i++;
-                    encounter.Add(list[j]);
+                    encounter.AddMonster(list[j]);
                 }
             }
 
@@ -68,7 +69,7 @@ namespace DeckOfManyEncounters
                 if (list[j].ChallengeRating == targetCR)
                 {
                     num--;
-                    encounter.Add(list[j]);
+                    encounter.AddMonster(list[j]);
                     targetCR = smallGuys - (num - 1);
                 }
             }
