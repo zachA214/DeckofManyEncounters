@@ -20,7 +20,6 @@ namespace DeckOfManyEncounters
             Encounter encounter = new Encounter();
             int intCR = (int)Math.Round(CR);
             int adder = 0;
-            MessageBox.Show($"{list[0].Name}");
             Shuffle(list);
 
             for(int i = 0, j = 0; i < 1; j++)
