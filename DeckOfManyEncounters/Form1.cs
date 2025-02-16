@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using Image = System.Drawing.Image;
 
 namespace DeckOfManyEncounters
 {
@@ -17,6 +20,7 @@ namespace DeckOfManyEncounters
         public bool flyer = true, swimmer = true;
         internal CalculationManager CM1 = new CalculationManager();
         internal List<Encounter> encounterList = new List<Encounter> { };
+        private List<Image> characterSprites = new List<Image> { };
 
         private void partyButton_Click(object sender, EventArgs e)
         {
@@ -64,15 +68,78 @@ namespace DeckOfManyEncounters
             InitializeComponent();
 
             this.Paint += DeckOfManyEncounters_Paint;
-        
+
         }
-        
+
+        private int getIndexSprite(string characterClass)
+        {
+            if (characterClass == "Barbarian")
+            {
+                return 0;
+            }
+            if (characterClass == "Bard")
+            {
+                return 1;
+            }
+            if (characterClass == "Cleric")
+            {
+                return 2;
+            }
+            if (characterClass == "Druid")
+            {
+                return 3;
+            }
+            if (characterClass == "Fightr")
+            {
+                return 4;
+            }
+            if (characterClass == "Monk")
+            {
+                return 5;
+            }
+            if (characterClass == "Paladin")
+            {
+                return 7;
+            }
+            if (characterClass == "Ranger")
+            {
+                return 8;
+            }
+            if (characterClass == "Rogue")
+            {
+                return 9;
+            }
+            if (characterClass == "Sorcerer")
+            {
+                return 10;
+            }
+            if (characterClass == "Warlock")
+            {
+                return 11;
+            }
+            if (characterClass == "Wizard")
+            {
+                return 12;
+            }
+            return -1;
+        }
+
         //creates 
         private void DeckOfManyEncounters_Paint(object sender, PaintEventArgs e)
         {
+
+            // Get all .png files in the "Images" folder
+            string[] imageFiles = Directory.GetFiles("Images", "*.png");
+
+            // Load each image and add it to the list
+            foreach (var file in imageFiles)
+            {
+                Image image = Image.FromFile(file);
+                characterSprites.Add(image);
+            }
             Graphics g = e.Graphics;
             Font displayFont = new Font("Arial", 24); // Set a starting font size
-            float squareSize = 20; // Size of the square (20x20)
+            float spriteSize = 20; // Size of the square (20x20)
             float leftMargin = 20; // Space from the left edge
             float xPosition = leftMargin; // Start from the left side
             float yPosition = 50; // Fixed Y position for the row
@@ -82,7 +149,7 @@ namespace DeckOfManyEncounters
             foreach (Player nameToDisplay in CM1.party)
             {
                 SizeF stringSize = g.MeasureString(nameToDisplay.Name, displayFont);
-                totalWidth += stringSize.Width + squareSize + 20; // Add space for the square and some padding
+                totalWidth += stringSize.Width + spriteSize + 20; // Add space for the square and some padding
             }
 
             // Adjust font size to ensure totalWidth fits the screen width
@@ -96,7 +163,7 @@ namespace DeckOfManyEncounters
                 foreach (Player nameToDisplay in CM1.party)
                 {
                     SizeF stringSize = g.MeasureString(nameToDisplay.Name, displayFont);
-                    totalWidth += stringSize.Width + squareSize + 20; // Add space for the square and some padding
+                    totalWidth += stringSize.Width + spriteSize + 20; // Add space for the square and some padding
                 }
             }
 
@@ -113,12 +180,12 @@ namespace DeckOfManyEncounters
                 g.DrawString(nameToDisplay.Name, displayFont, Brushes.White, xPosition, yPosition);
 
                 // Draw a small square under the name with white color
-                float squareX = xPosition + (stringSize.Width - squareSize) / 2; // Center square under the name
-                float squareY = yPosition + stringSize.Height + 5; // Position square below the name
-                g.FillRectangle(Brushes.White, squareX, squareY, squareSize, squareSize);
+                float posX = xPosition + (stringSize.Width - spriteSize) / 2; // Center square under the name
+                float posY = yPosition + stringSize.Height + 5; // Position square below the name
+                g.DrawImage(characterSprites[getIndexSprite(nameToDisplay.Classification)], new Point((int)posX, (int)posY));
 
                 // Update the xPosition for the next name to be placed next to the current one
-                xPosition += stringSize.Width + squareSize + 20; // Add space between names
+                xPosition += stringSize.Width + spriteSize + 20; // Add space between names
             }
         }
         private void inputFormOpenButton_Click(object sender, EventArgs e)
