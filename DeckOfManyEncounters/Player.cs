@@ -20,6 +20,11 @@ namespace DeckOfManyEncounters
 
         public string Classification { get { return classification; } set { classification = value; } } 
 
-
+        public Player(string  name, string classification, int level)
+        {
+            this.name = name;
+            this.classification = classification;
+            this.level = level;
+        }
     }
 }
